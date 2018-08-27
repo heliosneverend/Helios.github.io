@@ -1242,6 +1242,16 @@ pre .javascript .function {
   cursor: zoom-in;
   cursor: -webkit-zoom-in;
 }
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+}
 .post-body .image-caption,
 .post-body .figure .caption {
   margin: -20px auto 15px;
@@ -1838,7 +1848,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #11edd6;
+  background: #6ff4e4;
 }
 .links-of-blogroll {
   font-size: 13px;
