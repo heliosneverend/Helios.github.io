@@ -335,7 +335,7 @@
                 
               
 
-              <time title="Created: 2018-08-27 16:09:05 / Modified: 16:14:27" itemprop="dateCreated datePublished" datetime="2018-08-27T16:09:05+08:00">2018-08-27</time>
+              <time title="Created: 2018-08-27 16:09:05 / Modified: 16:16:30" itemprop="dateCreated datePublished" datetime="2018-08-27T16:09:05+08:00">2018-08-27</time>
             
 
             
@@ -375,7 +375,7 @@
       
         
           
-            <h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br>func backToViewController(className: String, animated: Bool) {<br>        if ((self.navigationController) != nil) {<br>            let controllers: Array = (self.navigationController?.viewControllers) ?? []<br>            let res = controllers.filter { (item) -&gt; Bool in<br>            guard let aClass = NSClassFromString(className) else {<br>            return false<br>            }<br>            return item.isKind(of: aClass)<br>    }<br>        if (res.count &gt; 0) {<br>        self.navigationController?.popToViewController(res[0], animated: animated)<br>        }<br>    }<br>}</p>
+            <h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br>func backToViewController(className: String, animated: Bool) {<br>        if ((self.navigationController) != nil) {<br>            let controllers: Array = (self.navigationController?.viewControllers) ?? []<br>            let res = controllers.filter { (item) -&gt; Bool in<br>            guard let aClass = NSClassFromString(className) else {<br>            return false<br>            }<br>            return item.isKind(of: aClass)<br>    }<br>        if (res.count &gt; 0) {<br>        self.navigationController?.popToViewController(res[0], animated: animated)<br>        }<br>    }<br>}<br><a href="https://github.com/heliosneverend/popToViewController.git" target="_blank" rel="noopener">示例代码Demo</a></p>
 
           
         
