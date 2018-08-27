@@ -289,6 +289,146 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/27/swift和OC返回指定页面/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zyf">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Heliso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/27/swift和OC返回指定页面/" itemprop="url">
+                  swift和OC返回指定页面
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-27 16:09:05 / Modified: 16:14:27" itemprop="dateCreated datePublished" datetime="2018-08-27T16:09:05+08:00">2018-08-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br>func backToViewController(className: String, animated: Bool) {<br>        if ((self.navigationController) != nil) {<br>            let controllers: Array = (self.navigationController?.viewControllers) ?? []<br>            let res = controllers.filter { (item) -&gt; Bool in<br>            guard let aClass = NSClassFromString(className) else {<br>            return false<br>            }<br>            return item.isKind(of: aClass)<br>    }<br>        if (res.count &gt; 0) {<br>        self.navigationController?.popToViewController(res[0], animated: animated)<br>        }<br>    }<br>}</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/27/记录苹果设备唯一账号/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -482,7 +622,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
