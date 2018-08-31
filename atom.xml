@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-31T08:58:11.493Z</updated>
+  <updated>2018-08-31T09:00:11.080Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/08/27/swift%E5%92%8COC%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E9%A1%B5%E9%9D%A2/"/>
     <id>http://yoursite.com/2018/08/27/swift和OC返回指定页面/</id>
     <published>2018-08-27T08:09:05.000Z</published>
-    <updated>2018-08-31T08:58:11.493Z</updated>
+    <updated>2018-08-31T09:00:11.080Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func backToViewController(className: String, animated: Bool) &#123;  </span><br><span class="line">        if ((self.navigationController) != nil) &#123;  </span><br><span class="line">            let controllers: Array = (self.navigationController?.viewControllers) ?? []  </span><br><span class="line">            let res = controllers.filter &#123; (item) -&gt; Bool in  </span><br><span class="line">                guard let aClass = NSClassFromString(className) else &#123;  </span><br><span class="line">                return false  </span><br><span class="line">            &#125;  </span><br><span class="line">            return item.isKind(of: aClass)  </span><br><span class="line">        &#125;  </span><br><span class="line">        if (res.count &gt; 0) &#123;  </span><br><span class="line">            self.navigationController?.popToViewController(res[0], animated: animated)  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/heliosneverend/popToViewController.git" target="_blank" rel="noopener">示例代码Demo</a></p>]]></content>
     
