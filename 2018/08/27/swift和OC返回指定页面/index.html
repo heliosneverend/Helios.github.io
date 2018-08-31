@@ -108,17 +108,17 @@
 
 
 
-  <meta name="description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法func backToViewController(className: String, animated: Bool) {           if ((self.navigationController) != nil) {               let controllers: Array">
+  <meta name="description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法backToViewController(className: String, animated: Bool) &amp;#123;  12345678910111213        if ((self.navigationController) != nil) &amp;#123;              let">
 <meta property="og:type" content="article">
 <meta property="og:title" content="swift和OC返回指定页面">
 <meta property="og:url" content="http://yoursite.com/2018/08/27/swift和OC返回指定页面/index.html">
 <meta property="og:site_name" content="Heliso">
-<meta property="og:description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法func backToViewController(className: String, animated: Bool) {           if ((self.navigationController) != nil) {               let controllers: Array">
+<meta property="og:description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法backToViewController(className: String, animated: Bool) &amp;#123;  12345678910111213        if ((self.navigationController) != nil) &amp;#123;              let">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-31T08:32:30.662Z">
+<meta property="og:updated_time" content="2018-08-31T08:52:34.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift和OC返回指定页面">
-<meta name="twitter:description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法func backToViewController(className: String, animated: Bool) {           if ((self.navigationController) != nil) {               let controllers: Array">
+<meta name="twitter:description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法backToViewController(className: String, animated: Bool) &amp;#123;  12345678910111213        if ((self.navigationController) != nil) &amp;#123;              let">
 
 
 
@@ -377,7 +377,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-31 16:32:30" itemprop="dateModified" datetime="2018-08-31T16:32:30+08:00">2018-08-31</time>
+                <time title="Modified: 2018-08-31 16:52:34" itemprop="dateModified" datetime="2018-08-31T16:52:34+08:00">2018-08-31</time>
               
             
           </span>
@@ -410,20 +410,8 @@
       
 
       
-        <h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br><code>func backToViewController(className: String, animated: Bool) {  
-        if ((self.navigationController) != nil) {  
-            let controllers: Array = (self.navigationController?.viewControllers) ?? []  
-            let res = controllers.filter { (item) -&gt; Bool in  
-            guard let aClass = NSClassFromString(className) else {  
-                return false  
-                }  
-            return item.isKind(of: aClass)  
-                }  
-        if (res.count &gt; 0) {  
-        self.navigationController?.popToViewController(res[0], animated: animated)  
-        }  
-    }  
-}</code><br><a href="https://github.com/heliosneverend/popToViewController.git" target="_blank" rel="noopener">示例代码Demo</a></p>
+        <h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br><figure class="highlight plain"><figcaption><span>backToViewController(className: String, animated: Bool) &#123;  </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">        if ((self.navigationController) != nil) &#123;  </span><br><span class="line">            let controllers: Array = (self.navigationController?.viewControllers) ?? []  </span><br><span class="line">            let res = controllers.filter &#123; (item) -&gt; Bool in  </span><br><span class="line">            guard let aClass = NSClassFromString(className) else &#123;  </span><br><span class="line">                return false  </span><br><span class="line">                &#125;  </span><br><span class="line">            return item.isKind(of: aClass)  </span><br><span class="line">                &#125;  </span><br><span class="line">        if (res.count &gt; 0) &#123;  </span><br><span class="line">        self.navigationController?.popToViewController(res[0], animated: animated)  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/heliosneverend/popToViewController.git" target="_blank" rel="noopener">示例代码Demo</a></p>
 
       
     </div>
