@@ -108,18 +108,14 @@
 
 
 
-  <meta name="description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法1234567891011121314func backToViewController(className: String, animated: Bool) &amp;#123;          if ((self.navigationController) != nil) &amp;#123;">
-<meta name="keywords" content="function">
-<meta property="og:type" content="article">
-<meta property="og:title" content="swift和OC返回指定页面">
-<meta property="og:url" content="http://yoursite.com/2018/08/27/swift和OC返回指定页面/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Shell">
+<meta property="og:url" content="http://yoursite.com/Shell/index.html">
 <meta property="og:site_name" content="Heliso">
-<meta property="og:description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法1234567891011121314func backToViewController(className: String, animated: Bool) &amp;#123;          if ((self.navigationController) != nil) &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-31T09:00:11.080Z">
+<meta property="og:updated_time" content="2018-08-31T09:11:22.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swift和OC返回指定页面">
-<meta name="twitter:description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法1234567891011121314func backToViewController(className: String, animated: Bool) &amp;#123;          if ((self.navigationController) != nil) &amp;#123;">
+<meta name="twitter:title" content="Shell">
 
 
 
@@ -128,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/27/swift和OC返回指定页面/"/>
+  <link rel="canonical" href="http://yoursite.com/Shell/"/>
 
 
 
@@ -138,7 +134,7 @@
   };
 </script>
 
-  <title>swift和OC返回指定页面 | Heliso</title>
+  <title>Shell | Heliso</title>
   
 
 
@@ -274,7 +270,7 @@
         
         
           
-          <li class="menu-item menu-item-shell">
+          <li class="menu-item menu-item-shell menu-item-active">
     <a href="/Shell" rel="section">
       <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />Shell</a>
   </li>
@@ -303,6 +299,40 @@
   
     
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
   
 
   
@@ -329,181 +359,43 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/27/swift和OC返回指定页面/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Heliso">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">swift和OC返回指定页面
-              
-            
-          </h1>
-        
+<h1 class="post-title" itemprop="name headline">Shell</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
+<div class="post-meta">
+  
+  
 
-            
-            
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
 
-              
-                
-              
-
-              <time title="Created: 2018-08-27 16:09:05" itemprop="dateCreated datePublished" datetime="2018-08-27T16:09:05+08:00">2018-08-27</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-08-31 17:00:11" itemprop="dateModified" datetime="2018-08-31T17:00:11+08:00">2018-08-31</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func backToViewController(className: String, animated: Bool) &#123;  </span><br><span class="line">        if ((self.navigationController) != nil) &#123;  </span><br><span class="line">            let controllers: Array = (self.navigationController?.viewControllers) ?? []  </span><br><span class="line">            let res = controllers.filter &#123; (item) -&gt; Bool in  </span><br><span class="line">                guard let aClass = NSClassFromString(className) else &#123;  </span><br><span class="line">                return false  </span><br><span class="line">            &#125;  </span><br><span class="line">            return item.isKind(of: aClass)  </span><br><span class="line">        &#125;  </span><br><span class="line">        if (res.count &gt; 0) &#123;  </span><br><span class="line">            self.navigationController?.popToViewController(res[0], animated: animated)  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/heliosneverend/popToViewController.git" target="_blank" rel="noopener">示例代码Demo</a></p>
-
-      
-    </div>
-
-    
-
-    
-    
-    
-      <div>
-      
-      <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
 </div>
 
-    
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          
+        
+      </div>
+      
+      
+      
     </div>
-
     
 
+
+
     
-
     
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/function/" rel="tag"><i class="fa fa-tag"></i> function</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/08/27/记录苹果设备唯一账号/" rel="next" title="记录苹果设备唯一账号">
-                <i class="fa fa-chevron-left"></i> 记录苹果设备唯一账号
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
+    
   </div>
 
 
@@ -533,17 +425,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -635,22 +518,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VC-多层-push后回到指定页面的几种方法"><span class="nav-number">1.</span> <span class="nav-text">VC 多层 push后回到指定页面的几种方法</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
