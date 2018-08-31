@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-31T08:27:31.255Z</updated>
+  <updated>2018-08-31T08:32:30.662Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/08/27/swift%E5%92%8COC%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E9%A1%B5%E9%9D%A2/"/>
     <id>http://yoursite.com/2018/08/27/swift和OC返回指定页面/</id>
     <published>2018-08-27T08:09:05.000Z</published>
-    <updated>2018-08-31T08:27:31.255Z</updated>
+    <updated>2018-08-31T08:32:30.662Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br><code>func backToViewController(className: String, animated: Bool) {          if ((self.navigationController) != nil) {              let controllers: Array = (self.navigationController?.viewControllers) ?? []              let res = controllers.filter { (item) -&gt; Bool in              guard let aClass = NSClassFromString(className) else {                  return false                  }              return item.isKind(of: aClass)                  }          if (res.count &gt; 0) {          self.navigationController?.popToViewController(res[0], animated: animated)          }      }  }</code><br><a href="https://github.com/heliosneverend/popToViewController.git" target="_blank" rel="noopener">示例代码Demo</a></p>]]></content>
     
