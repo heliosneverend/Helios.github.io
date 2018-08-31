@@ -401,7 +401,7 @@
       
         
           
-          VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法func backToViewController(className: String, animated: Bool) {        if ((self.navigationController) 
+          VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法func backToViewController(className: String, animated: Bool) {        if ((self.navigationController) != nil) {            let controllers: Array = (self.navigationController?.viewControllers) ?? []            let res = controllers.filter { (item) -&gt
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -550,7 +550,9 @@
       
         
           
-          iOS获取设备唯一标识符UDID(Unique Device Identifier)苹果IOS设备的唯一识别码, 越狱的设备通过某些工具可以改变设备的UDID,在iOS5.0(2011年8月份)开始，苹果宣布将不再支持uniqueIdentifier方法获取设备的UDID，iOS5以下是可以用的, 
+          iOS获取设备唯一标识符UDID(Unique Device Identifier)苹果IOS设备的唯一识别码, 越狱的设备通过某些工具可以改变设备的UDID,在iOS5.0(2011年8月份)开始，苹果宣布将不再支持uniqueIdentifier方法获取设备的UDID，iOS5以下是可以用的, 在 2013年3月21日苹果已经通知开发者,从2013年5月1日起，访问UIDIDs的程序将不再被审核通过替代的方案是开发者应该使用“在iOS 6中介绍的Vendor或Advertising标示符
+
+UUID(Universally Unique Identifier)唯一识别码它是让分布式系统中的
           ...
           <!--noindex-->
           <div class="post-button text-center">
