@@ -108,15 +108,23 @@
 
 
 
-  <meta name="keywords" content="数据结构">
+  <meta name="description" content="双向链表结构12345typedef structDualNode &amp;#123;    ElemType data;    struct DualNode*prior;  //前驱结点    struct DualNode*next;   //后继结点&amp;#125; DualNode, *DuLinkList; 既然单链表可以有循环链表，那么双向链表当然也可以有:双向链表的插入操作：s-&amp;gt;ne">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="双向链表">
 <meta property="og:url" content="http://yoursite.com/2016/08/16/双向链表/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="双向链表结构12345typedef structDualNode &amp;#123;    ElemType data;    struct DualNode*prior;  //前驱结点    struct DualNode*next;   //后继结点&amp;#125; DualNode, *DuLinkList; 既然单链表可以有循环链表，那么双向链表当然也可以有:双向链表的插入操作：s-&amp;gt;ne">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T08:46:14.075Z">
+<meta property="og:image" content="http://yoursite.com/2016/08/16/双向链表/双向链表1.png">
+<meta property="og:image" content="http://yoursite.com/2016/08/16/双向链表/双向链表2.png">
+<meta property="og:image" content="http://yoursite.com/2016/08/16/双向链表/双向链表3.png">
+<meta property="og:image" content="http://yoursite.com/2016/08/16/双向链表/双向链表4.png">
+<meta property="og:updated_time" content="2018-09-03T09:10:40.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="双向链表">
+<meta name="twitter:description" content="双向链表结构12345typedef structDualNode &amp;#123;    ElemType data;    struct DualNode*prior;  //前驱结点    struct DualNode*next;   //后继结点&amp;#125; DualNode, *DuLinkList; 既然单链表可以有循环链表，那么双向链表当然也可以有:双向链表的插入操作：s-&amp;gt;ne">
+<meta name="twitter:image" content="http://yoursite.com/2016/08/16/双向链表/双向链表1.png">
 
 
 
@@ -367,7 +375,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 16:46:14" itemprop="dateModified" datetime="2018-09-03T16:46:14+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:10:40" itemprop="dateModified" datetime="2018-09-03T17:10:40+08:00">2018-09-03</time>
               
             
           </span>
@@ -418,7 +426,9 @@
       
 
       
-        
+        <h2 id="双向链表结构"><a href="#双向链表结构" class="headerlink" title="双向链表结构"></a>双向链表结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">typedef structDualNode &#123;</span><br><span class="line">    ElemType data;</span><br><span class="line">    struct DualNode*prior;  //前驱结点</span><br><span class="line">    struct DualNode*next;   //后继结点</span><br><span class="line">&#125; DualNode, *DuLinkList;</span><br></pre></td></tr></table></figure>
+<p><img src="双向链表1.png" alt=""><br>既然单链表可以有循环链表，那么双向链表当然也可以有:<br><img src="双向链表2.png" alt=""><br>双向链表的插入操作：<br><img src="双向链表3.png" alt=""><br>s-&gt;next = p;<br>s-&gt;prior = p-&gt;prior;<br>p-&gt;prior-&gt;next = s;<br>p-&gt;prior = s;<br>双向链表的删除操作<br><img src="双向链表4.png" alt=""><br>p-&gt;prior-&gt;next = p-&gt;next;<br>p-&gt;next-&gt;prior = p-&gt;prior;<br>free(p);</p>
+
       
     </div>
 
@@ -518,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -636,6 +655,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#双向链表结构"><span class="nav-number">1.</span> <span class="nav-text">双向链表结构</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

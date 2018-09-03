@@ -108,15 +108,20 @@
 
 
 
-  <meta name="keywords" content="数据结构">
+  <meta name="description" content="对于单链表，由于每个结点只存储了向后的指针，到了尾部标识就停止了向后链的操作。也就是说，按照这样的方式，只能索引后继结点不能索引前驱结点。这会带来什么问题呢？例如不从头结点出发，就无法访问到全部结点。事实上要解决这个问题也并不麻烦，只需要将单链表中终端结点的指针端由空指针改为指向头结点，问题就结了。将单链表中终端结点的指针端由空指针改为指向头结点，就使整个单链表形成一个环，这种头尾相接的单链表成为">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="循环链表">
 <meta property="og:url" content="http://yoursite.com/2016/07/04/循环链表/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="对于单链表，由于每个结点只存储了向后的指针，到了尾部标识就停止了向后链的操作。也就是说，按照这样的方式，只能索引后继结点不能索引前驱结点。这会带来什么问题呢？例如不从头结点出发，就无法访问到全部结点。事实上要解决这个问题也并不麻烦，只需要将单链表中终端结点的指针端由空指针改为指向头结点，问题就结了。将单链表中终端结点的指针端由空指针改为指向头结点，就使整个单链表形成一个环，这种头尾相接的单链表成为">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T08:43:53.351Z">
+<meta property="og:image" content="http://yoursite.com/2016/07/04/循环链表/单循环链表示意图.png">
+<meta property="og:updated_time" content="2018-09-03T09:07:57.954Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="循环链表">
+<meta name="twitter:description" content="对于单链表，由于每个结点只存储了向后的指针，到了尾部标识就停止了向后链的操作。也就是说，按照这样的方式，只能索引后继结点不能索引前驱结点。这会带来什么问题呢？例如不从头结点出发，就无法访问到全部结点。事实上要解决这个问题也并不麻烦，只需要将单链表中终端结点的指针端由空指针改为指向头结点，问题就结了。将单链表中终端结点的指针端由空指针改为指向头结点，就使整个单链表形成一个环，这种头尾相接的单链表成为">
+<meta name="twitter:image" content="http://yoursite.com/2016/07/04/循环链表/单循环链表示意图.png">
 
 
 
@@ -367,7 +372,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 16:43:53" itemprop="dateModified" datetime="2018-09-03T16:43:53+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:07:57" itemprop="dateModified" datetime="2018-09-03T17:07:57+08:00">2018-09-03</time>
               
             
           </span>
@@ -418,7 +423,10 @@
       
 
       
-        
+        <p>对于单链表，由于每个结点只存储了向后的指针，到了尾部标识就停止了向后链的操作。也就是说，按照这样的方式，只能索引后继结点不能索引前驱结点。<br>这会带来什么问题呢？<br>例如不从头结点出发，就无法访问到全部结点。<br>事实上要解决这个问题也并不麻烦，只需要将单链表中终端结点的指针端由空指针改为指向头结点，问题就结了。<br>将单链表中终端结点的指针端由空指针改为指向头结点，就使整个单链表形成一个环，这种头尾相接的单链表成为单循环链表，简称循环链表<br><img src="单循环链表示意图.png" alt=""><br>注：这里并不是说循环链表一定要有头结点。</p>
+<p>其实循环链表的单链表的主要差异就在于循环的判断空链表的条件上，原来判断head-&gt;next是否为null，现在则是head-&gt;next是否等于head</p>
+<p>约瑟夫问题：<br>据说著名犹太历史学家 Josephus有过以下的故事：在罗马人占领乔塔帕特后，39个犹太人与Josephus及他的朋友躲到一个洞中，39个犹太人决定宁愿死也不要被敌人抓到，于是决定了一个自杀方式，41个人排成一个圆圈，由第1个人开始报数，每报数到第3人该人就必须自杀，然后再由下一个重新报数，直到所有人都自杀身亡为止。<br>然而Josephus和他的朋友并不想遵从，Josephus要他的朋友先假装遵从，他将朋友与自己安排在第16个与第31个位置，于是逃过了这场死亡游戏。</p>
+
       
     </div>
 

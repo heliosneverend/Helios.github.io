@@ -370,7 +370,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 16:42:41" itemprop="dateModified" datetime="2018-09-03T16:42:41+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 16:57:22" itemprop="dateModified" datetime="2018-09-03T16:57:22+08:00">2018-09-03</time>
               
             
           </span>
@@ -424,8 +424,8 @@
         
           
           线性表定义：作为常见的一种数据结构，线性表是由0个或者多个数据元素组成的有限序列。a1无前驱元素，a1是a2的前驱元素，a2是a1的后继元素，an无后继元素；当n=0时候，称为空表。
-
-          
+线性表操作：InitList(L)：初始化并建立一个空的线性表ListEmpty(L): 判断线性表是否为空表ClearList(L): 将线性表清空GetElem(L, i,
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/07/16/线性表/#more" rel="contents">
@@ -550,7 +550,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 16:43:53" itemprop="dateModified" datetime="2018-09-03T16:43:53+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:07:57" itemprop="dateModified" datetime="2018-09-03T17:07:57+08:00">2018-09-03</time>
               
             
           </span>
@@ -603,8 +603,8 @@
       
         
           
-          
-          
+          对于单链表，由于每个结点只存储了向后的指针，到了尾部标识就停止了向后链的操作。也就是说，按照这样的方式，只能索引后继结点不能索引前驱结点。这会带来什么问题呢？例如不从头结点出发，就无法访问到全部结点。事实上要解决这个问题也并不麻烦，只需要将单链表中终端结点的指针端由空指针改为指向头结点，问题就结了。将单链表中终端结点的指针端由空指针改为指向头结点，就使整个单
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/07/04/循环链表/#more" rel="contents">
@@ -729,7 +729,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 16:47:28" itemprop="dateModified" datetime="2018-09-03T16:47:28+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:19:50" itemprop="dateModified" datetime="2018-09-03T17:19:50+08:00">2018-09-03</time>
               
             
           </span>
@@ -782,8 +782,8 @@
       
         
           
-          
-          
+          静态链表说明用数组描述的链表称之为静态链表。这种描述方法叫做游标实现法。我们对数组的第一个和最后一个元素做特殊处理，他们的data不存放数据。我们通常把未使用的数组元素称为备用链表。数组的第一个元素，即下标为0的那个元素的cur就存放备用链表的第一个结点的下标。即第0个元素的游标为5数组的最后一个元素，即下标为MAXSIZE-1的cur则存放第一个有数值的元
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/07/03/静态链表/#more" rel="contents">
@@ -908,7 +908,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 16:49:31" itemprop="dateModified" datetime="2018-09-03T16:49:31+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:00:11" itemprop="dateModified" datetime="2018-09-03T17:00:11+08:00">2018-09-03</time>
               
             
           </span>
@@ -961,8 +961,11 @@
       
         
           
-          
-          
+          单链表的整表创建：1.头插法头插法从一个空表开始，生成新结点，读取数据存放到新结点的数据域中，然后将新结点插入到当前链表的表头上，直到结束为止。
+简单来说，就是把新加进的元素放在表头后的第一个位置：先让新节点的next指向头节点之后然后让表头的next指向新节点缺点是： 链表顺序跟要插入的数据顺序是反着的。
+2.尾插法
+单链表的整表删除：当我们不打算使用这个
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/06/13/单向链表的整表操作/#more" rel="contents">

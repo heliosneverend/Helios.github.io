@@ -108,15 +108,21 @@
 
 
 
-  <meta name="keywords" content="数据结构">
+  <meta name="description" content="静态链表说明用数组描述的链表称之为静态链表。这种描述方法叫做游标实现法。我们对数组的第一个和最后一个元素做特殊处理，他们的data不存放数据。我们通常把未使用的数组元素称为备用链表。数组的第一个元素，即下标为0的那个元素的cur就存放备用链表的第一个结点的下标。即第0个元素的游标为5数组的最后一个元素，即下标为MAXSIZE-1的cur则存放第一个有数值的元素的下标，相当于单链表中的头结点作用。即">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="静态链表">
 <meta property="og:url" content="http://yoursite.com/2016/07/03/静态链表/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="静态链表说明用数组描述的链表称之为静态链表。这种描述方法叫做游标实现法。我们对数组的第一个和最后一个元素做特殊处理，他们的data不存放数据。我们通常把未使用的数组元素称为备用链表。数组的第一个元素，即下标为0的那个元素的cur就存放备用链表的第一个结点的下标。即第0个元素的游标为5数组的最后一个元素，即下标为MAXSIZE-1的cur则存放第一个有数值的元素的下标，相当于单链表中的头结点作用。即">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T08:47:28.808Z">
+<meta property="og:image" content="http://yoursite.com/2016/07/03/静态链表/静态链表.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/03/静态链表/静态链表的插入.png">
+<meta property="og:updated_time" content="2018-09-03T09:19:50.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="静态链表">
+<meta name="twitter:description" content="静态链表说明用数组描述的链表称之为静态链表。这种描述方法叫做游标实现法。我们对数组的第一个和最后一个元素做特殊处理，他们的data不存放数据。我们通常把未使用的数组元素称为备用链表。数组的第一个元素，即下标为0的那个元素的cur就存放备用链表的第一个结点的下标。即第0个元素的游标为5数组的最后一个元素，即下标为MAXSIZE-1的cur则存放第一个有数值的元素的下标，相当于单链表中的头结点作用。即">
+<meta name="twitter:image" content="http://yoursite.com/2016/07/03/静态链表/静态链表.png">
 
 
 
@@ -367,7 +373,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 16:47:28" itemprop="dateModified" datetime="2018-09-03T16:47:28+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:19:50" itemprop="dateModified" datetime="2018-09-03T17:19:50+08:00">2018-09-03</time>
               
             
           </span>
@@ -418,7 +424,16 @@
       
 
       
-        
+        <h2 id="静态链表说明"><a href="#静态链表说明" class="headerlink" title="静态链表说明"></a>静态链表说明</h2><p>用数组描述的链表称之为静态链表。<br>这种描述方法叫做游标实现法。<br><img src="静态链表.png" alt=""><br>我们对数组的第一个和最后一个元素做特殊处理，他们的data不存放数据。<br>我们通常把未使用的数组元素称为备用链表。<br>数组的第一个元素，即下标为0的那个元素的cur就存放备用链表的第一个结点的下标。即第0个元素的游标为5<br>数组的最后一个元素，即下标为MAXSIZE-1的cur则存放第一个有数值的元素的下标，相当于单链表中的头结点作用。即第999个元素游标为1</p>
+<p>静态链表存储结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#define MAXSIZE 1000</span><br><span class="line">typedefstruct</span><br><span class="line">&#123;</span><br><span class="line">ElemTypedata;  // 数据</span><br><span class="line">intcur;        // 游标（Cursor）</span><br><span class="line">&#125; Component, StaticLinkList[MAXSIZE];</span><br></pre></td></tr></table></figure></p>
+<h2 id="静态链表的插入："><a href="#静态链表的插入：" class="headerlink" title="静态链表的插入："></a>静态链表的插入：</h2><p>每当进行插入时，可以从备用链表上取得第一个结点作为待插入的新结点。</p>
+<p>要将B元素插入到A元素后面：<br><img src="静态链表的插入.png" alt=""><br>优点：</p>
+<p>在插入和删除操作时，只需要修改游标，不需要移动元素，从而改进了在顺序存储结构中的插入和删除操作需要移动大量元素的缺点。<br>缺点：</p>
+<p>没有解决连续存储分配（数组）带来的表长难以确定的问题。<br>失去了顺序存储结构随机存取的特性。</p>
+<h2 id="问题：如何快速找到单向链表的中间节点？"><a href="#问题：如何快速找到单向链表的中间节点？" class="headerlink" title="问题：如何快速找到单向链表的中间节点？"></a>问题：如何快速找到单向链表的中间节点？</h2><p>方法1. 从头遍历单向链表，得到链表总长度L，然后再从头遍历L/2长度拿到中间节点，程序执行次数3L/2</p>
+<p>方法2. 利用快慢指针，设置两个指针search和mid都指向单向链表的头节点。其中search指针的移动速度是mid的两倍。当search指针指向末尾节点的时候，mid指针就恰好在中间位置。也即标尺的思想。程序执行次数L/2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Status GetMidNode(LinkList L, ElemType *e) &#123;</span><br><span class="line">    LinkList search, mid;</span><br><span class="line">    mid = search = L;</span><br><span class="line">    while (search-&gt;next != NULL) &#123;</span><br><span class="line">        if (search-&gt;next-&gt;next != NULL) &#123;</span><br><span class="line">            search = search-&gt;next-&gt;next;</span><br><span class="line">            mid = mid-&gt;next;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                search = search-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        *e = mid-&gt;data;</span><br><span class="line">        return OK;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="问题：如何判断单向链表是否有环？"><a href="#问题：如何判断单向链表是否有环？" class="headerlink" title="问题：如何判断单向链表是否有环？"></a>问题：如何判断单向链表是否有环？</h2><p>方法一：使用p、q两个指针，p总是向前走，但q每次都从头开始走，对于每个节点，看p走的步数是否和q一样。如图，当p从6走到3时，用了6步，此时若q从head出发，则只需两步就到3，因而步数不等，出现矛盾，存在环。<br>方法二：使用p、q两个指针，p每次向前走一步，q每次向前走两步，若在某个时候p == q，则存在环。</p>
+
       
     </div>
 
@@ -518,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -636,6 +660,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态链表说明"><span class="nav-number">1.</span> <span class="nav-text">静态链表说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态链表的插入："><span class="nav-number">2.</span> <span class="nav-text">静态链表的插入：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题：如何快速找到单向链表的中间节点？"><span class="nav-number">3.</span> <span class="nav-text">问题：如何快速找到单向链表的中间节点？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题：如何判断单向链表是否有环？"><span class="nav-number">4.</span> <span class="nav-text">问题：如何判断单向链表是否有环？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

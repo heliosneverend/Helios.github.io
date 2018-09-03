@@ -108,15 +108,18 @@
 
 
 
-  <meta name="keywords" content="数据结构">
+  <meta name="description" content="给定n个权值作为n个[叶子结点]，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。 哈夫曼静态编码：它对需要编码的数据进行两遍扫描：第一遍统计原数据中各字符出现的频率，利用得到的频率值创建哈夫曼树，并必须把树的信息保存起来，即把字符0-255(28=256)的频率值以2-4">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="赫夫曼树和赫夫曼编码">
 <meta property="og:url" content="http://yoursite.com/2017/01/02/赫夫曼树和赫夫曼编码/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="给定n个权值作为n个[叶子结点]，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。 哈夫曼静态编码：它对需要编码的数据进行两遍扫描：第一遍统计原数据中各字符出现的频率，利用得到的频率值创建哈夫曼树，并必须把树的信息保存起来，即把字符0-255(28=256)的频率值以2-4">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T08:48:45.493Z">
+<meta property="og:updated_time" content="2018-09-03T09:19:44.977Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="赫夫曼树和赫夫曼编码">
+<meta name="twitter:description" content="给定n个权值作为n个[叶子结点]，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。 哈夫曼静态编码：它对需要编码的数据进行两遍扫描：第一遍统计原数据中各字符出现的频率，利用得到的频率值创建哈夫曼树，并必须把树的信息保存起来，即把字符0-255(28=256)的频率值以2-4">
 
 
 
@@ -367,7 +370,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 16:48:45" itemprop="dateModified" datetime="2018-09-03T16:48:45+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:19:44" itemprop="dateModified" datetime="2018-09-03T17:19:44+08:00">2018-09-03</time>
               
             
           </span>
@@ -418,7 +421,10 @@
       
 
       
-        
+        <p>给定n个权值作为n个[叶子结点]，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。</p>
+<p>哈夫曼静态编码：它对需要编码的数据进行两遍扫描：第一遍统计原数据中各字符出现的频率，利用得到的频率值创建哈夫曼树，并必须把树的信息保存起来，即把字符0-255(28=256)的频率值以2-4BYTES的长度顺序存储起来，（用4Bytes的长度存储频率值，频率值的表示范围为0–232-1，这已足够表示大文件中字符出现的频率了）以便解压时创建同样的哈夫曼树进行解压；第二遍则根据第一遍扫描得到的哈夫曼树进行编码，并把编码后得到的码字存储起来。</p>
+<p>哈夫曼动态编码：动态哈夫曼编码使用一棵动态变化的哈夫曼树，对第t+1个字符的编码是根据原始数据中前t个字符得到的哈夫曼树来进行的，编码和解码使用相同的初始哈夫曼树，每处理完一个字符，编码和解码使用相同的方法修改哈夫曼树，所以没有必要为解码而保存哈夫曼树的信息。编码和解码一个字符所需的时间与该字符的编码长度成正比，所以动态哈夫曼编码可实时进行</p>
+
       
     </div>
 
