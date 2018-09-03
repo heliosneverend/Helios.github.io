@@ -108,15 +108,18 @@
 
 
 
-  <meta name="keywords" content="Shell">
+  <meta name="description" content="shell中将输入、输出和错误用三种描述符表示：标准输入STDIN，用0表示，接受键盘输入使用cat命令接受键盘输入非标准输入-文件输入，即使用cat读取文件标准输出STDOUT，对应终端显示，1表示标准错误STDERR，2表示 Demo1：重定向输出到文件中ls -l显示文件的信息   追加内容替换内容who命令打印当前登录的系统用户信息12345ls -l hello.shcat hello.">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shell重定向">
 <meta property="og:url" content="http://yoursite.com/2017/08/25/Shell重定向/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="shell中将输入、输出和错误用三种描述符表示：标准输入STDIN，用0表示，接受键盘输入使用cat命令接受键盘输入非标准输入-文件输入，即使用cat读取文件标准输出STDOUT，对应终端显示，1表示标准错误STDERR，2表示 Demo1：重定向输出到文件中ls -l显示文件的信息   追加内容替换内容who命令打印当前登录的系统用户信息12345ls -l hello.shcat hello.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:32:51.776Z">
+<meta property="og:updated_time" content="2018-09-03T10:35:42.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell重定向">
+<meta name="twitter:description" content="shell中将输入、输出和错误用三种描述符表示：标准输入STDIN，用0表示，接受键盘输入使用cat命令接受键盘输入非标准输入-文件输入，即使用cat读取文件标准输出STDOUT，对应终端显示，1表示标准错误STDERR，2表示 Demo1：重定向输出到文件中ls -l显示文件的信息   追加内容替换内容who命令打印当前登录的系统用户信息12345ls -l hello.shcat hello.">
 
 
 
@@ -391,7 +394,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:32:51" itemprop="dateModified" datetime="2018-09-03T17:32:51+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:35:42" itemprop="dateModified" datetime="2018-09-03T18:35:42+08:00">2018-09-03</time>
               
             
           </span>
@@ -442,7 +445,29 @@
       
 
       
-        
+        <h3 id="shell中将输入、输出和错误用三种描述符表示："><a href="#shell中将输入、输出和错误用三种描述符表示：" class="headerlink" title="shell中将输入、输出和错误用三种描述符表示："></a>shell中将输入、输出和错误用三种描述符表示：</h3><p>标准输入STDIN，用0表示，接受键盘输入<br>使用cat命令接受键盘输入<br>非标准输入-文件输入，即使用cat读取文件<br>标准输出STDOUT，对应终端显示，1表示<br>标准错误STDERR，2表示</p>
+<h3 id="Demo1：重定向输出到文件中"><a href="#Demo1：重定向输出到文件中" class="headerlink" title="Demo1：重定向输出到文件中"></a>Demo1：重定向输出到文件中</h3><p>ls -l显示文件的信息</p>
+<blockquote>
+<blockquote>
+<p>追加内容<br>替换内容<br>who命令打印当前登录的系统用户信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ls -l hello.sh</span><br><span class="line">cat hello.sh</span><br><span class="line">#追加内容</span><br><span class="line">who&gt;&gt;hello.sh</span><br><span class="line">cat hello.sh</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+<h3 id="Demo2：重定向错误信息输出到文件中"><a href="#Demo2：重定向错误信息输出到文件中" class="headerlink" title="Demo2：重定向错误信息输出到文件中"></a>Demo2：重定向错误信息输出到文件中</h3><p>-al查找文件<br>❌错误做法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al hello.sh &gt; aim.sh</span><br></pre></td></tr></table></figure></p>
+<p>上面执行后，如果没有aim.sh文件，则会自动创建aim.sh文件，但是最终都不会将错误信息输出到目标文件aim.sh中<br>所以如果我们需要保存错误信息，就需要采用STDERR实现<br>✅正确做法：<br>将STDERR文件描述修改为2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al a.sh 2&gt;hello.sh</span><br></pre></td></tr></table></figure></p>
+<h3 id="Demo3：同时保存错误和数据到不同文件"><a href="#Demo3：同时保存错误和数据到不同文件" class="headerlink" title="Demo3：同时保存错误和数据到不同文件"></a>Demo3：同时保存错误和数据到不同文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#将错误数据重定向到error.sh文件中,将查找结果保存到hello.sh文件中</span><br><span class="line">ls -al a.sh b.sh c.sh 2&gt;error.sh &gt;hello.sh</span><br></pre></td></tr></table></figure>
+<h3 id="Demo4：同时保存错误和数据到同一个文件"><a href="#Demo4：同时保存错误和数据到同一个文件" class="headerlink" title="Demo4：同时保存错误和数据到同一个文件"></a>Demo4：同时保存错误和数据到同一个文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -a file.sh &amp;&gt;result.sh</span><br><span class="line">#查看文件内容</span><br><span class="line">cat result.sh</span><br></pre></td></tr></table></figure>
+<h2 id="临时重定向输出"><a href="#临时重定向输出" class="headerlink" title="临时重定向输出:"></a>临时重定向输出:</h2><p>&amp;命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#将输出信息作为错位日志</span><br><span class="line">echo &quot;haha&quot; &gt;&amp; 2</span><br></pre></td></tr></table></figure></p>
+<p>执行：将STDERR信息重定向到error.sh文件中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hello.sh 2&gt;error.sh</span><br></pre></td></tr></table></figure></p>
+<h2 id="永久重定向输出"><a href="#永久重定向输出" class="headerlink" title="永久重定向输出"></a>永久重定向输出</h2><p>exec命令<br>保存数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#在文件内部</span><br><span class="line">exec 1 &gt; new.sh</span><br><span class="line">echo &quot;haha&quot;</span><br></pre></td></tr></table></figure></p>
+<h2 id="重定向输入"><a href="#重定向输入" class="headerlink" title="重定向输入:"></a>重定向输入:</h2><p>命令符&lt;<br>一旦设置了输入重定向指令，则read指令会自动连接输入的内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#从hello.sh文件中读取数据</span><br><span class="line">exec 0&lt; hello.sh</span><br><span class="line">count=0</span><br><span class="line">while read line</span><br><span class="line">do</span><br><span class="line">echo &quot;当前行的内容数据是：$line，当前行数：$count&quot;</span><br><span class="line">count=$[$count + 1]</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+<h2 id="自定义重定向输出"><a href="#自定义重定向输出" class="headerlink" title="自定义重定向输出:"></a>自定义重定向输出:</h2><p>使用exec命令<br>🎈下面这种方式，会替换掉要定向文件里面的所有内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exec 3&gt; hello.sh</span><br><span class="line">#临时重定向，标记文件</span><br><span class="line">echo &quot;haha&quot; &gt;&amp;3</span><br></pre></td></tr></table></figure></p>
+<p>🎈如果在要定向的文件中追加内容，而不是替换：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exec 3 &gt;&gt; hello.sh</span><br><span class="line">#临时重定向，标记文件</span><br><span class="line">echo &quot;haha&quot; &gt;&amp;3</span><br></pre></td></tr></table></figure></p>
+<h2 id="重定向输出恢复"><a href="#重定向输出恢复" class="headerlink" title="重定向输出恢复"></a>重定向输出恢复</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#将3重定向为1</span><br><span class="line">exec 3 &gt;&amp; 1</span><br><span class="line">exec 1&gt; hello.sh</span><br><span class="line">echo &quot;haha&quot;</span><br><span class="line">#将1恢复到3</span><br><span class="line">exec 1 &gt;&amp; 3</span><br><span class="line">echo &quot;xixi&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="创建读写文件描述符"><a href="#创建读写文件描述符" class="headerlink" title="创建读写文件描述符"></a>创建读写文件描述符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">exec 3&lt;&gt;hello.sh</span><br><span class="line">#从hello文件中读取内容</span><br><span class="line">read line &gt;&amp;3</span><br><span class="line">echo &quot;$line&quot;</span><br><span class="line">#写入内容</span><br><span class="line">echo &quot;hah&quot; &gt;&amp; 3</span><br><span class="line">#注意：此写入会替换掉从第二行开始的所有内容</span><br><span class="line">#因为上面读取完第一行后，此时文件指针指向到了第二行</span><br></pre></td></tr></table></figure>
+<h2 id="关闭读写文件描述符"><a href="#关闭读写文件描述符" class="headerlink" title="关闭读写文件描述符"></a>关闭读写文件描述符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec 3 &gt;&amp;-</span><br></pre></td></tr></table></figure>
+<h2 id="阻止命令输出"><a href="#阻止命令输出" class="headerlink" title="阻止命令输出:"></a>阻止命令输出:</h2><p>输出到系统一个临时文件中，但是此临时文件不会保存内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al &gt; /dev/null</span><br></pre></td></tr></table></figure></p>
+<p>使用阻止输出来清空文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /dev/null &gt; hello.sh</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -542,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +706,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#shell中将输入、输出和错误用三种描述符表示："><span class="nav-number">1.</span> <span class="nav-text">shell中将输入、输出和错误用三种描述符表示：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo1：重定向输出到文件中"><span class="nav-number">2.</span> <span class="nav-text">Demo1：重定向输出到文件中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo2：重定向错误信息输出到文件中"><span class="nav-number">3.</span> <span class="nav-text">Demo2：重定向错误信息输出到文件中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo3：同时保存错误和数据到不同文件"><span class="nav-number">4.</span> <span class="nav-text">Demo3：同时保存错误和数据到不同文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo4：同时保存错误和数据到同一个文件"><span class="nav-number">5.</span> <span class="nav-text">Demo4：同时保存错误和数据到同一个文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#临时重定向输出"><span class="nav-number"></span> <span class="nav-text">临时重定向输出:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#永久重定向输出"><span class="nav-number"></span> <span class="nav-text">永久重定向输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重定向输入"><span class="nav-number"></span> <span class="nav-text">重定向输入:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义重定向输出"><span class="nav-number"></span> <span class="nav-text">自定义重定向输出:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重定向输出恢复"><span class="nav-number"></span> <span class="nav-text">重定向输出恢复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建读写文件描述符"><span class="nav-number"></span> <span class="nav-text">创建读写文件描述符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭读写文件描述符"><span class="nav-number"></span> <span class="nav-text">关闭读写文件描述符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阻止命令输出"><span class="nav-number"></span> <span class="nav-text">阻止命令输出:</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

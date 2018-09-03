@@ -108,15 +108,18 @@
 
 
 
-  <meta name="keywords" content="Shell">
+  <meta name="description" content="声明一个数组1nameArray=(&amp;quot;Mike&amp;quot; &amp;quot;Bill&amp;quot; &amp;quot;John&amp;quot;) 给数组增加值或者替换值1nameArray[3]=&amp;quot;Gil&amp;quot; 默认只输出数组第一个值1echo $nameArray 输出下标指定的值1echo $&amp;#123;nameArray[1]&amp;#125; $&amp;#123;nameArray[3]&amp;#">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shell数组">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/Shell数组/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="声明一个数组1nameArray=(&amp;quot;Mike&amp;quot; &amp;quot;Bill&amp;quot; &amp;quot;John&amp;quot;) 给数组增加值或者替换值1nameArray[3]=&amp;quot;Gil&amp;quot; 默认只输出数组第一个值1echo $nameArray 输出下标指定的值1echo $&amp;#123;nameArray[1]&amp;#125; $&amp;#123;nameArray[3]&amp;#">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:28:25.667Z">
+<meta property="og:updated_time" content="2018-09-03T10:09:28.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell数组">
+<meta name="twitter:description" content="声明一个数组1nameArray=(&amp;quot;Mike&amp;quot; &amp;quot;Bill&amp;quot; &amp;quot;John&amp;quot;) 给数组增加值或者替换值1nameArray[3]=&amp;quot;Gil&amp;quot; 默认只输出数组第一个值1echo $nameArray 输出下标指定的值1echo $&amp;#123;nameArray[1]&amp;#125; $&amp;#123;nameArray[3]&amp;#">
 
 
 
@@ -391,7 +394,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:28:25" itemprop="dateModified" datetime="2018-09-03T17:28:25+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:09:28" itemprop="dateModified" datetime="2018-09-03T18:09:28+08:00">2018-09-03</time>
               
             
           </span>
@@ -442,7 +445,15 @@
       
 
       
-        
+        <h3 id="声明一个数组"><a href="#声明一个数组" class="headerlink" title="声明一个数组"></a>声明一个数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameArray=(&quot;Mike&quot; &quot;Bill&quot; &quot;John&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="给数组增加值或者替换值"><a href="#给数组增加值或者替换值" class="headerlink" title="给数组增加值或者替换值"></a>给数组增加值或者替换值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameArray[3]=&quot;Gil&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="默认只输出数组第一个值"><a href="#默认只输出数组第一个值" class="headerlink" title="默认只输出数组第一个值"></a>默认只输出数组第一个值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $nameArray</span><br></pre></td></tr></table></figure>
+<h3 id="输出下标指定的值"><a href="#输出下标指定的值" class="headerlink" title="输出下标指定的值"></a>输出下标指定的值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;nameArray[1]&#125; $&#123;nameArray[3]&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="输出数组内所有值-–-gt-结果为多个字符串"><a href="#输出数组内所有值-–-gt-结果为多个字符串" class="headerlink" title="输出数组内所有值 –&gt; 结果为多个字符串"></a>输出数组内所有值 –&gt; 结果为多个字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;nameArray[@]&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="输出数组内所有值-–-gt-结果为一个字符串"><a href="#输出数组内所有值-–-gt-结果为一个字符串" class="headerlink" title="输出数组内所有值 –&gt; 结果为一个字符串"></a>输出数组内所有值 –&gt; 结果为一个字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;nameArray[*]&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="获取数组元素个数"><a href="#获取数组元素个数" class="headerlink" title="获取数组元素个数"></a>获取数组元素个数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：$&#123;#数组名[@]&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;#nameArray&#125; ----- 输出数组第一个元素长度</span><br><span class="line">echo $&#123;#nameArray[10]&#125; ----- 输出数组第10个元素长度</span><br><span class="line">echo $&#123;#nameArray[@]&#125; ---- 输出数组整体元素个数</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -542,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +692,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明一个数组"><span class="nav-number">1.</span> <span class="nav-text">声明一个数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给数组增加值或者替换值"><span class="nav-number">2.</span> <span class="nav-text">给数组增加值或者替换值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认只输出数组第一个值"><span class="nav-number">3.</span> <span class="nav-text">默认只输出数组第一个值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出下标指定的值"><span class="nav-number">4.</span> <span class="nav-text">输出下标指定的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出数组内所有值-–-gt-结果为多个字符串"><span class="nav-number">5.</span> <span class="nav-text">输出数组内所有值 –&gt; 结果为多个字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出数组内所有值-–-gt-结果为一个字符串"><span class="nav-number">6.</span> <span class="nav-text">输出数组内所有值 –&gt; 结果为一个字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取数组元素个数"><span class="nav-number">7.</span> <span class="nav-text">获取数组元素个数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -108,15 +108,18 @@
 
 
 
-  <meta name="keywords" content="Shell">
+  <meta name="description" content="打开数据库1234#!/bin/bash#脚本中书写：MYSQL=$(which mysql)$MYSQL -u root -p 退出数据库12345#!/bin/bash#登录数据库：MYSQL=$(which mysql)#$MYSQL -u root -p 表示登录数据库，后面[-e &amp;apos;exit&amp;apos;]命令表示登录后立即执行退出指令$MYSQL -u root -p -e &amp;">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shell中的数据库操作">
 <meta property="og:url" content="http://yoursite.com/2017/08/26/Shell中的数据库操作/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="打开数据库1234#!/bin/bash#脚本中书写：MYSQL=$(which mysql)$MYSQL -u root -p 退出数据库12345#!/bin/bash#登录数据库：MYSQL=$(which mysql)#$MYSQL -u root -p 表示登录数据库，后面[-e &amp;apos;exit&amp;apos;]命令表示登录后立即执行退出指令$MYSQL -u root -p -e &amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:33:36.658Z">
+<meta property="og:updated_time" content="2018-09-03T10:41:36.407Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell中的数据库操作">
+<meta name="twitter:description" content="打开数据库1234#!/bin/bash#脚本中书写：MYSQL=$(which mysql)$MYSQL -u root -p 退出数据库12345#!/bin/bash#登录数据库：MYSQL=$(which mysql)#$MYSQL -u root -p 表示登录数据库，后面[-e &amp;apos;exit&amp;apos;]命令表示登录后立即执行退出指令$MYSQL -u root -p -e &amp;">
 
 
 
@@ -391,7 +394,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:33:36" itemprop="dateModified" datetime="2018-09-03T17:33:36+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:41:36" itemprop="dateModified" datetime="2018-09-03T18:41:36+08:00">2018-09-03</time>
               
             
           </span>
@@ -442,7 +445,14 @@
       
 
       
-        
+        <h3 id="打开数据库"><a href="#打开数据库" class="headerlink" title="打开数据库"></a>打开数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#脚本中书写：</span><br><span class="line">MYSQL=$(which mysql)</span><br><span class="line">$MYSQL -u root -p</span><br></pre></td></tr></table></figure>
+<h3 id="退出数据库"><a href="#退出数据库" class="headerlink" title="退出数据库"></a>退出数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#登录数据库：</span><br><span class="line">MYSQL=$(which mysql)</span><br><span class="line">#$MYSQL -u root -p 表示登录数据库，后面[-e &apos;exit&apos;]命令表示登录后立即执行退出指令</span><br><span class="line">$MYSQL -u root -p -e &apos;exit&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="显示数据库列表"><a href="#显示数据库列表" class="headerlink" title="显示数据库列表"></a>显示数据库列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MYSQL=$(which mysql)</span><br><span class="line">$MYSQL -u root -p -e &apos;show databases&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="查询数据库表"><a href="#查询数据库表" class="headerlink" title="查询数据库表"></a>查询数据库表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MYSQL=$(which mysql)</span><br><span class="line">$MYSQL db_123 -u root -p -e &apos;select * from t_student&apos;</span><br><span class="line">#格式 $MYSQL 数据库名  -u root -p -e 查询命令</span><br></pre></td></tr></table></figure>
+<h3 id="查询数据库表-amp-输入重定向"><a href="#查询数据库表-amp-输入重定向" class="headerlink" title="查询数据库表&amp;输入重定向"></a>查询数据库表&amp;输入重定向</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MYSQL=$(which mysql)</span><br><span class="line">$MYSQL db_123 -u root -p &lt;&lt; MARK</span><br><span class="line">select * from t_student</span><br><span class="line">MARK</span><br><span class="line"></span><br><span class="line"># 开始标记和结束标记语法：&lt;T&gt; 代码 &lt;T&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="插入表数据"><a href="#插入表数据" class="headerlink" title="插入表数据"></a>插入表数据</h3><h4 id="案例一"><a href="#案例一" class="headerlink" title="案例一"></a>案例一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$MYSQL db_123 -u root -p &lt;&lt;MARK</span><br><span class="line">insert into t_student values(3,&quot;Mike&quot;,1)</span><br><span class="line">MARK</span><br></pre></td></tr></table></figure>
+<h4 id="案例二-动态传递参数，并且返回执行状态"><a href="#案例二-动态传递参数，并且返回执行状态" class="headerlink" title="案例二 动态传递参数，并且返回执行状态"></a>案例二 动态传递参数，并且返回执行状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">MYSQL=$&#123;which mysql&#125;</span><br><span class="line">#若不等于某个长度</span><br><span class="line">if [$# -ne 3]</span><br><span class="line">then</span><br><span class="line">echo &quot;传递的参数不对&quot;</span><br><span class="line">else </span><br><span class="line">#插入数据</span><br><span class="line">$MYQSL db_123 -u root -p &lt;&lt; MARK</span><br><span class="line">insert into t_student values(4,&apos;Grap&apos;,1)</span><br><span class="line">MARK</span><br><span class="line">#执行状态</span><br><span class="line">if []</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -542,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +691,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#打开数据库"><span class="nav-number">1.</span> <span class="nav-text">打开数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出数据库"><span class="nav-number">2.</span> <span class="nav-text">退出数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示数据库列表"><span class="nav-number">3.</span> <span class="nav-text">显示数据库列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询数据库表"><span class="nav-number">4.</span> <span class="nav-text">查询数据库表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询数据库表-amp-输入重定向"><span class="nav-number">5.</span> <span class="nav-text">查询数据库表&amp;输入重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入表数据"><span class="nav-number">6.</span> <span class="nav-text">插入表数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#案例一"><span class="nav-number">6.1.</span> <span class="nav-text">案例一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#案例二-动态传递参数，并且返回执行状态"><span class="nav-number">6.2.</span> <span class="nav-text">案例二 动态传递参数，并且返回执行状态</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

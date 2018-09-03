@@ -108,15 +108,18 @@
 
 
 
-  <meta name="keywords" content="Shell">
+  <meta name="description" content="文件包含方式一文件a： a.sh12!#/bin/bashecho &amp;quot;a&amp;quot; 文件b： b.sh123!#/bin/bash./a.shecho &amp;quot;b 此时文件b包含了文件a，执行b文件，就会把文件a和文件b的内容都执行 方式二 使用关键字source123!#/bin/bashsource ./a.shecho &amp;quot;b cat命令作用：查看文件内容连接文件创建">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shell文件操作相关">
 <meta property="og:url" content="http://yoursite.com/2017/08/20/Shell文件操作相关/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="文件包含方式一文件a： a.sh12!#/bin/bashecho &amp;quot;a&amp;quot; 文件b： b.sh123!#/bin/bash./a.shecho &amp;quot;b 此时文件b包含了文件a，执行b文件，就会把文件a和文件b的内容都执行 方式二 使用关键字source123!#/bin/bashsource ./a.shecho &amp;quot;b cat命令作用：查看文件内容连接文件创建">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:30:27.946Z">
+<meta property="og:updated_time" content="2018-09-03T10:27:18.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell文件操作相关">
+<meta name="twitter:description" content="文件包含方式一文件a： a.sh12!#/bin/bashecho &amp;quot;a&amp;quot; 文件b： b.sh123!#/bin/bash./a.shecho &amp;quot;b 此时文件b包含了文件a，执行b文件，就会把文件a和文件b的内容都执行 方式二 使用关键字source123!#/bin/bashsource ./a.shecho &amp;quot;b cat命令作用：查看文件内容连接文件创建">
 
 
 
@@ -391,7 +394,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:30:27" itemprop="dateModified" datetime="2018-09-03T17:30:27+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:27:18" itemprop="dateModified" datetime="2018-09-03T18:27:18+08:00">2018-09-03</time>
               
             
           </span>
@@ -442,7 +445,27 @@
       
 
       
-        
+        <h2 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h2><h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><p>文件a： a.sh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">!#/bin/bash</span><br><span class="line">echo &quot;a&quot;</span><br></pre></td></tr></table></figure></p>
+<p>文件b： b.sh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!#/bin/bash</span><br><span class="line">./a.sh</span><br><span class="line">echo &quot;b</span><br></pre></td></tr></table></figure></p>
+<p>此时文件b包含了文件a，执行b文件，就会把文件a和文件b的内容都执行</p>
+<h3 id="方式二-使用关键字source"><a href="#方式二-使用关键字source" class="headerlink" title="方式二 使用关键字source"></a>方式二 使用关键字source</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!#/bin/bash</span><br><span class="line">source ./a.sh</span><br><span class="line">echo &quot;b</span><br></pre></td></tr></table></figure>
+<h2 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h2><p>作用：<br>查看文件内容<br>连接文件<br>创建一个或多个文件<br>重定向输出到终端<br>重定向到文件<br>查看文件内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat hello.sh</span><br></pre></td></tr></table></figure></p>
+<p>显示文件内容和行号:<br>使用-n<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat -n hello.sh</span><br></pre></td></tr></table></figure></p>
+<p>显示文件内容和行号,只标记空白行:<br>使用-b<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat -b a.sh</span><br></pre></td></tr></table></figure></p>
+<p>⚠️多行内容转为单行：<br>使用-e，会在每一行内容的最后加入$符号</p>
+<p>⚠️接受标准输入，输出标准输出：<br>输入后使用回车键<br>使用ctrl+c退出</p>
+<h2 id="读取输入内容"><a href="#读取输入内容" class="headerlink" title="读取输入内容"></a>读取输入内容</h2><p>使用关键字read<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;请输入名字&quot;</span><br><span class="line">read name</span><br><span class="line">echo &quot;您输入的名字是:$name&quot;</span><br></pre></td></tr></table></figure></p>
+<p>另一种写法: 使用-p<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">read -p &quot;请输入您的名字&quot; name</span><br><span class="line">echo &quot;您输入的名字是:$name&quot;</span><br></pre></td></tr></table></figure></p>
+<p>带有超时读取：使用-t<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if read -t 6 -p &quot;请输入您的名字:&quot; name</span><br><span class="line">then </span><br><span class="line">echo &quot;您输入的名字是:$name&quot;</span><br><span class="line">else </span><br><span class="line">echo &quot;超时&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure></p>
+<p>隐藏输入内容，密码，使用-s<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if read -s -p &quot;请输入您的密码:&quot; pwd</span><br></pre></td></tr></table></figure></p>
+<p>从文件中按行读取内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat file.sh | while read line</span><br><span class="line">do </span><br><span class="line">echo &quot;每一行的内容是：$&#123;line&#125;&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+<h2 id="printf命令详解"><a href="#printf命令详解" class="headerlink" title="printf命令详解"></a>printf命令详解</h2><p>printf区别于echo命令，不会换行，一般用于格式化打印输出<br>语法：printf fomat -string 参数列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#打印表头</span><br><span class="line">printf &quot;%-10s %-8s %-4s \n&quot; 姓名 性别 体重kg</span><br><span class="line">#打印内容</span><br><span class="line">printf &quot;%-10s %-8s %-4s \n&quot; Mike 女 62kg</span><br><span class="line">printf &quot;%-10s %-8s %-4s \n&quot; Bill 男 50kg</span><br></pre></td></tr></table></figure></p>
+<p>解释：%-10s表示宽度为10个字符的距离,-表示左对齐</p>
+<h2 id="创建临时文件"><a href="#创建临时文件" class="headerlink" title="创建临时文件"></a>创建临时文件</h2><p>使用命令符mktemp<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mktemp hello.sh</span><br><span class="line">#创建一个以haha为前缀，以随机6位字母为结尾文件名的文件</span><br><span class="line">mktemp haha.XXXXXX</span><br></pre></td></tr></table></figure></p>
+<p>在脚本中创建：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#创建临时文件</span><br><span class="line">tempfile=$(mktemp newfile.XXXXXX)</span><br><span class="line">#重定向临时文件</span><br><span class="line">exec 3&gt; $tempfile</span><br><span class="line">echo &quot;$tempfile&quot;</span><br><span class="line">#输出内容到重定向的文件中</span><br><span class="line">echo &quot;哈哈&quot; &gt;&amp;3</span><br><span class="line">#关闭重定向</span><br><span class="line">exec 3&gt;&amp;-</span><br><span class="line">#打印文件内容</span><br><span class="line">cat $tempfile</span><br><span class="line">#删除文件</span><br><span class="line">rm -f $tempfile 2&gt; /dev/null</span><br></pre></td></tr></table></figure></p>
+<h2 id="在系统临时目录创建临时文件"><a href="#在系统临时目录创建临时文件" class="headerlink" title="在系统临时目录创建临时文件"></a>在系统临时目录创建临时文件</h2><p>使用命令符-t创建：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mktemp -t newfile.XXXXXX</span><br></pre></td></tr></table></figure></p>
+<h2 id="创建临时目录"><a href="#创建临时目录" class="headerlink" title="创建临时目录"></a>创建临时目录</h2><p>使用命令符-d创建<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tempfile=$(mktemp -d newfile.XXXXXX)</span><br><span class="line">#进入临时目录</span><br><span class="line">cd $tempfile</span><br><span class="line">$在临时目录创建临时文件</span><br><span class="line">tempfile1=$(mktemp newfile.XXXXXX)</span><br><span class="line">#自定义文件描述符 重定向输出</span><br><span class="line">exec 7 &gt; $tempfile1</span><br><span class="line">exec &quot;哈哈&quot; &gt;&amp; 7</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -542,8 +565,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +704,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件包含"><span class="nav-number">1.</span> <span class="nav-text">文件包含</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一"><span class="nav-number">1.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二-使用关键字source"><span class="nav-number">1.2.</span> <span class="nav-text">方式二 使用关键字source</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cat命令"><span class="nav-number">2.</span> <span class="nav-text">cat命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取输入内容"><span class="nav-number">3.</span> <span class="nav-text">读取输入内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#printf命令详解"><span class="nav-number">4.</span> <span class="nav-text">printf命令详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建临时文件"><span class="nav-number">5.</span> <span class="nav-text">创建临时文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在系统临时目录创建临时文件"><span class="nav-number">6.</span> <span class="nav-text">在系统临时目录创建临时文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建临时目录"><span class="nav-number">7.</span> <span class="nav-text">创建临时目录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

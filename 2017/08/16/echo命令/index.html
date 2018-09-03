@@ -108,15 +108,20 @@
 
 
 
-  <meta name="keywords" content="Shell">
+  <meta name="description" content="输出字符串 默认 带有换行:echo “字符串 哈哈”输出字符串 不换行 -e表示开启转义功能:12echo -e &amp;quot;不换行1\c&amp;quot;echo -e &amp;quot;不换行2&amp;quot; 字符串内部换行:1echo -e &amp;quot;开启了转义的字符串\n哈哈&amp;quot; 输出转义字符串:1echo &amp;quot; &amp;quot;这是一个转义字符&amp;quot; &amp;quot; 包含变量:12">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="echo命令">
 <meta property="og:url" content="http://yoursite.com/2017/08/16/echo命令/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="输出字符串 默认 带有换行:echo “字符串 哈哈”输出字符串 不换行 -e表示开启转义功能:12echo -e &amp;quot;不换行1\c&amp;quot;echo -e &amp;quot;不换行2&amp;quot; 字符串内部换行:1echo -e &amp;quot;开启了转义的字符串\n哈哈&amp;quot; 输出转义字符串:1echo &amp;quot; &amp;quot;这是一个转义字符&amp;quot; &amp;quot; 包含变量:12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:27:42.504Z">
+<meta property="og:image" content="http://yoursite.com/2017/08/16/echo命令/echo状态码.png">
+<meta property="og:updated_time" content="2018-09-03T10:07:45.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="echo命令">
+<meta name="twitter:description" content="输出字符串 默认 带有换行:echo “字符串 哈哈”输出字符串 不换行 -e表示开启转义功能:12echo -e &amp;quot;不换行1\c&amp;quot;echo -e &amp;quot;不换行2&amp;quot; 字符串内部换行:1echo -e &amp;quot;开启了转义的字符串\n哈哈&amp;quot; 输出转义字符串:1echo &amp;quot; &amp;quot;这是一个转义字符&amp;quot; &amp;quot; 包含变量:12">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/16/echo命令/echo状态码.png">
 
 
 
@@ -391,7 +396,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:27:42" itemprop="dateModified" datetime="2018-09-03T17:27:42+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:07:45" itemprop="dateModified" datetime="2018-09-03T18:07:45+08:00">2018-09-03</time>
               
             
           </span>
@@ -442,7 +447,15 @@
       
 
       
-        
+        <h3 id="输出字符串-默认-带有换行"><a href="#输出字符串-默认-带有换行" class="headerlink" title="输出字符串 默认 带有换行:"></a>输出字符串 默认 带有换行:</h3><p><strong>echo “字符串 哈哈”</strong><br>输出字符串 不换行 -e表示开启转义功能:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo -e &quot;不换行1\c&quot;</span><br><span class="line">echo -e &quot;不换行2&quot;</span><br></pre></td></tr></table></figure></p>
+<h3 id="字符串内部换行"><a href="#字符串内部换行" class="headerlink" title="字符串内部换行:"></a>字符串内部换行:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo -e &quot;开启了转义的字符串\n哈哈&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="输出转义字符串"><a href="#输出转义字符串" class="headerlink" title="输出转义字符串:"></a>输出转义字符串:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot; &quot;这是一个转义字符&quot; &quot;</span><br></pre></td></tr></table></figure>
+<h3 id="包含变量"><a href="#包含变量" class="headerlink" title="包含变量:"></a>包含变量:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=&quot;Mike&quot;</span><br><span class="line">echo &quot;$&#123;name&#125;是个人&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="显示一个命令"><a href="#显示一个命令" class="headerlink" title="显示一个命令:"></a>显示一个命令:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">time=$(date &quot;+%Y-%m-%d %H:%M:%S&quot;)</span><br><span class="line">echo $&#123;time&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="exit指令，执行后，后面的代码不执行了，退出程序"><a href="#exit指令，执行后，后面的代码不执行了，退出程序" class="headerlink" title="exit指令，执行后，后面的代码不执行了，退出程序:"></a>exit指令，执行后，后面的代码不执行了，退出程序:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;haha&quot;</span><br><span class="line">exit</span><br><span class="line">echo &quot;这条不执行了&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="exit-二"><a href="#exit-二" class="headerlink" title="exit 二"></a>exit 二</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;haha&quot;</span><br><span class="line">exit 1</span><br><span class="line">echo &quot;这条不执行了&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="命令状态"><a href="#命令状态" class="headerlink" title="命令状态"></a>命令状态</h3><p><img src="echo状态码.png" alt=""></p>
+
       
     </div>
 
@@ -542,8 +555,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +694,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#输出字符串-默认-带有换行"><span class="nav-number">1.</span> <span class="nav-text">输出字符串 默认 带有换行:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串内部换行"><span class="nav-number">2.</span> <span class="nav-text">字符串内部换行:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出转义字符串"><span class="nav-number">3.</span> <span class="nav-text">输出转义字符串:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包含变量"><span class="nav-number">4.</span> <span class="nav-text">包含变量:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示一个命令"><span class="nav-number">5.</span> <span class="nav-text">显示一个命令:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exit指令，执行后，后面的代码不执行了，退出程序"><span class="nav-number">6.</span> <span class="nav-text">exit指令，执行后，后面的代码不执行了，退出程序:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#exit-二"><span class="nav-number">6.1.</span> <span class="nav-text">exit 二</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令状态"><span class="nav-number">7.</span> <span class="nav-text">命令状态</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

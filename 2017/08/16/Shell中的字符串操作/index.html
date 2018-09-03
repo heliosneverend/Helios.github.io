@@ -108,15 +108,18 @@
 
 
 
-  <meta name="keywords" content="Shell">
+  <meta name="description" content="shell中字符串使用单、双引号均可:1234name=&amp;apos;andy&amp;apos;id=&amp;quot;haha&amp;quot;echo $nameecho $id 字符串拼接：方式一123456#!/bin/bashname=&amp;apos;andy&amp;apos;id=&amp;quot;haha&amp;quot;#可以缩写为total=&amp;quot;$name$id&amp;quot;total=&amp;quot;$&amp;#123;n">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shell中的字符串操作">
 <meta property="og:url" content="http://yoursite.com/2017/08/16/Shell中的字符串操作/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="shell中字符串使用单、双引号均可:1234name=&amp;apos;andy&amp;apos;id=&amp;quot;haha&amp;quot;echo $nameecho $id 字符串拼接：方式一123456#!/bin/bashname=&amp;apos;andy&amp;apos;id=&amp;quot;haha&amp;quot;#可以缩写为total=&amp;quot;$name$id&amp;quot;total=&amp;quot;$&amp;#123;n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:26:52.781Z">
+<meta property="og:updated_time" content="2018-09-03T10:04:09.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell中的字符串操作">
+<meta name="twitter:description" content="shell中字符串使用单、双引号均可:1234name=&amp;apos;andy&amp;apos;id=&amp;quot;haha&amp;quot;echo $nameecho $id 字符串拼接：方式一123456#!/bin/bashname=&amp;apos;andy&amp;apos;id=&amp;quot;haha&amp;quot;#可以缩写为total=&amp;quot;$name$id&amp;quot;total=&amp;quot;$&amp;#123;n">
 
 
 
@@ -391,7 +394,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:26:52" itemprop="dateModified" datetime="2018-09-03T17:26:52+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:04:09" itemprop="dateModified" datetime="2018-09-03T18:04:09+08:00">2018-09-03</time>
               
             
           </span>
@@ -442,7 +445,32 @@
       
 
       
-        
+        <p>shell中字符串使用单、双引号均可:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=&apos;andy&apos;</span><br><span class="line">id=&quot;haha&quot;</span><br><span class="line">echo $name</span><br><span class="line">echo $id</span><br></pre></td></tr></table></figure></p>
+<h2 id="字符串拼接："><a href="#字符串拼接：" class="headerlink" title="字符串拼接："></a>字符串拼接：</h2><h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">name=&apos;andy&apos;</span><br><span class="line">id=&quot;haha&quot;</span><br><span class="line">#可以缩写为total=&quot;$name$id&quot;</span><br><span class="line">total=&quot;$&#123;name&#125;$&#123;id&#125;&quot;</span><br><span class="line">echo $total</span><br></pre></td></tr></table></figure>
+<h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">name=&apos;andy&apos;</span><br><span class="line">id=&quot;haha&quot;</span><br><span class="line">total=&quot; 姓名：$name 身份证： $id&quot;</span><br><span class="line">echo $total</span><br></pre></td></tr></table></figure>
+<h2 id="获取字符串长度"><a href="#获取字符串长度" class="headerlink" title="获取字符串长度"></a>获取字符串长度</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法:$&#123;#变量名&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">name=&apos;andy&apos;</span><br><span class="line">echo $&#123;#name&#125;</span><br><span class="line">#输出结果是4</span><br></pre></td></tr></table></figure>
+<h2 id="字符串提取子串"><a href="#字符串提取子串" class="headerlink" title="字符串提取子串"></a>字符串提取子串</h2><h3 id="方式一-1"><a href="#方式一-1" class="headerlink" title="方式一"></a>方式一</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法$&#123;string:position&#125;</span><br></pre></td></tr></table></figure>
+<p>在$string中，从$position位置之后开始提取子串：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=&quot;abcABC123ABCabcde&quot;</span><br><span class="line">subname=$&#123;name:3&#125;</span><br><span class="line">echo $&#123;subname&#125;</span><br><span class="line">#输出结果ABC123ABCabcde</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法$&#123;string:position:length&#125;</span><br></pre></td></tr></table></figure>
+<p>在$string中，从$position位置之后开始提取$length长度的子串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;NAME:3:6&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="字符串删除"><a href="#字符串删除" class="headerlink" title="字符串删除"></a>字符串删除</h2><h3 id="从左到右删除"><a href="#从左到右删除" class="headerlink" title="从左到右删除"></a>从左到右删除</h3><h4 id="方式一-2"><a href="#方式一-2" class="headerlink" title="方式一"></a>方式一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;string#substring正则表达式&#125;</span><br></pre></td></tr></table></figure>
+<p>从变量$string开头开始删除最短匹配$substring子串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name=&quot;abcABC123ABCabcde&quot;</span><br><span class="line">subname=$&#123;name#a*c&#125;</span><br><span class="line">echo $&#123;subname&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;string##substring正则表达式&#125;</span><br></pre></td></tr></table></figure>
+<p>从变量$string开头开始删除最长匹配$sunstring子串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name=&quot;abcABC123ABCabcde&quot;</span><br><span class="line">subname=$&#123;name##a*c&#125;</span><br><span class="line">echo $&#123;subname&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="从右到左删除"><a href="#从右到左删除" class="headerlink" title="从右到左删除"></a>从右到左删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;string%substring&#125;</span><br></pre></td></tr></table></figure>
+<p>从变量$string结尾开始删除最短匹配$substring子串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;string%%substring&#125;</span><br></pre></td></tr></table></figure>
+<p>从变量$string结尾开始删除最长匹配$substring子串<br>注意:<br>在进行#或##匹配时，string的首字符必须是被删除子串substring的第一个字符，不然无法匹配删除；<br>在进行%或者%%匹配时，string的最后一个字符必须是被删除子串substring的最后一个字符，不然无法进行删除操作；</p>
+<h2 id="字符串替换"><a href="#字符串替换" class="headerlink" title="字符串替换"></a>字符串替换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;parameter/parttern/string&#125;</span><br></pre></td></tr></table></figure>
+<p>用string来替换第一个匹配的pattern</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;parameter/#parttern/string&#125;</span><br></pre></td></tr></table></figure>
+<p>从开头匹配parameter变量中的pattern，匹配上后就用string来替换匹配的pattern</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;parameter/%pattern/string&#125;</span><br></pre></td></tr></table></figure>
+<p>从结尾开始匹配parameter变量中的pattern，匹配上后就用string替换匹配的pattern</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;parameter//pattern/string&#125;</span><br></pre></td></tr></table></figure>
+<p>用string来替换parameter变量中所有匹配的pattern</p>
+
       
     </div>
 
@@ -542,8 +570,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +709,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串拼接："><span class="nav-number">1.</span> <span class="nav-text">字符串拼接：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一"><span class="nav-number">1.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二"><span class="nav-number">1.2.</span> <span class="nav-text">方式二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取字符串长度"><span class="nav-number">2.</span> <span class="nav-text">获取字符串长度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串提取子串"><span class="nav-number">3.</span> <span class="nav-text">字符串提取子串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一-1"><span class="nav-number">3.1.</span> <span class="nav-text">方式一</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串删除"><span class="nav-number">4.</span> <span class="nav-text">字符串删除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从左到右删除"><span class="nav-number">4.1.</span> <span class="nav-text">从左到右删除</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方式一-2"><span class="nav-number">4.1.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方式二："><span class="nav-number">4.1.2.</span> <span class="nav-text">方式二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从右到左删除"><span class="nav-number">4.2.</span> <span class="nav-text">从右到左删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串替换"><span class="nav-number">5.</span> <span class="nav-text">字符串替换</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

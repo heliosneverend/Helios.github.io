@@ -108,15 +108,20 @@
 
 
 
-  <meta name="keywords" content="Shell">
+  <meta name="description" content="shell作为程序员与内核系统交流的中间件，语言有很多种类，常用的是Bash。 创建一个简单的shell程序，输出helloworld：创建shell文件：1touch hello.sh 定义文件声明：1#!/bin/bash (#!表示约定标记，告诉系统这个脚本需要什么样的解释器来执行，也是脚本的一种体现)要执行的命令1echo &amp;quot;helllo world&amp;quot; (echo是输出">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初始Shell">
-<meta property="og:url" content="http://yoursite.com/2017/08/15/初始Shell/index.html">
+<meta property="og:title" content="初识Shell">
+<meta property="og:url" content="http://yoursite.com/2017/08/15/初识Shell/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="shell作为程序员与内核系统交流的中间件，语言有很多种类，常用的是Bash。 创建一个简单的shell程序，输出helloworld：创建shell文件：1touch hello.sh 定义文件声明：1#!/bin/bash (#!表示约定标记，告诉系统这个脚本需要什么样的解释器来执行，也是脚本的一种体现)要执行的命令1echo &amp;quot;helllo world&amp;quot; (echo是输出">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:25:19.725Z">
+<meta property="og:image" content="http://yoursite.com/2017/08/15/初识Shell/shell1.jpeg">
+<meta property="og:updated_time" content="2018-09-03T09:47:05.146Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初始Shell">
+<meta name="twitter:title" content="初识Shell">
+<meta name="twitter:description" content="shell作为程序员与内核系统交流的中间件，语言有很多种类，常用的是Bash。 创建一个简单的shell程序，输出helloworld：创建shell文件：1touch hello.sh 定义文件声明：1#!/bin/bash (#!表示约定标记，告诉系统这个脚本需要什么样的解释器来执行，也是脚本的一种体现)要执行的命令1echo &amp;quot;helllo world&amp;quot; (echo是输出">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/15/初识Shell/shell1.jpeg">
 
 
 
@@ -125,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/15/初始Shell/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/15/初识Shell/"/>
 
 
 
@@ -135,7 +140,7 @@
   };
 </script>
 
-  <title>初始Shell | Heliso</title>
+  <title>初识Shell | Heliso</title>
   
 
 
@@ -332,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/初始Shell/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/初识Shell/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zyf">
@@ -349,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初始Shell
+          <h1 class="post-title" itemprop="name headline">初识Shell
               
             
           </h1>
@@ -391,7 +396,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:25:19" itemprop="dateModified" datetime="2018-09-03T17:25:19+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:47:05" itemprop="dateModified" datetime="2018-09-03T17:47:05+08:00">2018-09-03</time>
               
             
           </span>
@@ -442,7 +447,16 @@
       
 
       
-        
+        <p>shell作为程序员与内核系统交流的中间件，语言有很多种类，常用的是Bash。</p>
+<h2 id="创建一个简单的shell程序，输出helloworld："><a href="#创建一个简单的shell程序，输出helloworld：" class="headerlink" title="创建一个简单的shell程序，输出helloworld："></a>创建一个简单的shell程序，输出helloworld：</h2><p>创建shell文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch hello.sh</span><br></pre></td></tr></table></figure></p>
+<p>定义文件声明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br></pre></td></tr></table></figure></p>
+<p>(#!表示约定标记，告诉系统这个脚本需要什么样的解释器来执行，也是脚本的一种体现)<br>要执行的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;helllo world&quot;</span><br></pre></td></tr></table></figure></p>
+<p>(echo是输出文本命令）<br>执行创建的这个脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hello.sh</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h2><p>文件权限结构分为：<br>文件类型 （相当于qq群类型）<br>文件所有者 （相当于qq群的群主）<br>所有者同组用户（相当于qq群里的管理员）<br>其他用户 （相当于qq群里的群成员）<br>文件权限分为：<br><img src="shell1.jpeg" alt=""></p>
+<h3 id="查看文件权限的命令："><a href="#查看文件权限的命令：" class="headerlink" title="查看文件权限的命令："></a>查看文件权限的命令：</h3><p><strong>ls -l 文件名</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//例如</span><br><span class="line">ls -l hello.sh</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改文件权限的命令"><a href="#修改文件权限的命令" class="headerlink" title="修改文件权限的命令"></a>修改文件权限的命令</h3><p><strong>chmod + x ./文件名</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//例如</span><br><span class="line">chmod +x ./hello.sh</span><br></pre></td></tr></table></figure></p>
+<h3 id="执行脚本的命令"><a href="#执行脚本的命令" class="headerlink" title="执行脚本的命令"></a>执行脚本的命令</h3><p><strong>./文件名</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//例如</span><br><span class="line">./hello.sh</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -542,8 +556,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +695,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个简单的shell程序，输出helloworld："><span class="nav-number">1.</span> <span class="nav-text">创建一个简单的shell程序，输出helloworld：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文件权限"><span class="nav-number">2.</span> <span class="nav-text">修改文件权限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看文件权限的命令："><span class="nav-number">2.1.</span> <span class="nav-text">查看文件权限的命令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文件权限的命令"><span class="nav-number">2.2.</span> <span class="nav-text">修改文件权限的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行脚本的命令"><span class="nav-number">2.3.</span> <span class="nav-text">执行脚本的命令</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

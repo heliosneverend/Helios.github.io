@@ -108,15 +108,18 @@
 
 
 
-  <meta name="keywords" content="Shell">
+  <meta name="description" content="注释shell语法使用#来注释内容：1234#!/bin/bash#这是一段注释echo &amp;quot;hello world&amp;quot; shell中没有多行注释，只有单行注释 变量类型：类型一：本地变量作用域是整个bash进程语法：name=”Mike” 类型二：局部变量作用域是当前代码段语法：local name=”Sun” 类型三：环境变量作用域是当前shell进程以及子进程语法：expor">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shell变量">
 <meta property="og:url" content="http://yoursite.com/2017/08/15/Shell变量/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="注释shell语法使用#来注释内容：1234#!/bin/bash#这是一段注释echo &amp;quot;hello world&amp;quot; shell中没有多行注释，只有单行注释 变量类型：类型一：本地变量作用域是整个bash进程语法：name=”Mike” 类型二：局部变量作用域是当前代码段语法：local name=”Sun” 类型三：环境变量作用域是当前shell进程以及子进程语法：expor">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:26:16.878Z">
+<meta property="og:updated_time" content="2018-09-03T09:55:19.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell变量">
+<meta name="twitter:description" content="注释shell语法使用#来注释内容：1234#!/bin/bash#这是一段注释echo &amp;quot;hello world&amp;quot; shell中没有多行注释，只有单行注释 变量类型：类型一：本地变量作用域是整个bash进程语法：name=”Mike” 类型二：局部变量作用域是当前代码段语法：local name=”Sun” 类型三：环境变量作用域是当前shell进程以及子进程语法：expor">
 
 
 
@@ -391,7 +394,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:26:16" itemprop="dateModified" datetime="2018-09-03T17:26:16+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:55:19" itemprop="dateModified" datetime="2018-09-03T17:55:19+08:00">2018-09-03</time>
               
             
           </span>
@@ -442,7 +445,23 @@
       
 
       
-        
+        <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>shell语法使用#来注释内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#这是一段注释</span><br><span class="line"></span><br><span class="line">echo &quot;hello world&quot;</span><br></pre></td></tr></table></figure></p>
+<p>shell中没有多行注释，只有单行注释</p>
+<h2 id="变量类型："><a href="#变量类型：" class="headerlink" title="变量类型："></a>变量类型：</h2><h3 id="类型一：本地变量"><a href="#类型一：本地变量" class="headerlink" title="类型一：本地变量"></a>类型一：本地变量</h3><p>作用域是整个bash进程<br>语法：<strong>name=”Mike”</strong></p>
+<h3 id="类型二：局部变量"><a href="#类型二：局部变量" class="headerlink" title="类型二：局部变量"></a>类型二：局部变量</h3><p>作用域是当前代码段<br>语法：<strong>local name=”Sun”</strong></p>
+<h3 id="类型三：环境变量"><a href="#类型三：环境变量" class="headerlink" title="类型三：环境变量"></a>类型三：环境变量</h3><p>作用域是当前shell进程以及子进程<br>语法：<strong>export name=””Dir</strong></p>
+<h3 id="类型四：位置变量"><a href="#类型四：位置变量" class="headerlink" title="类型四：位置变量"></a>类型四：位置变量</h3><p>位置变量示例1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=&quot;xiaoming&quot;</span><br><span class="line">$&#123;name&#125;haha</span><br><span class="line"></span><br><span class="line">echo &quot;姓名：$&#123;name&#125;&quot;</span><br></pre></td></tr></table></figure></p>
+<p>位置变量示例2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#给脚本文件传递参数</span><br><span class="line">#参数$&#123;0&#125;是脚本文件名字，所以要从$&#123;1&#125;开始取值</span><br><span class="line">name=$&#123;1&#125;</span><br><span class="line">age=$&#123;2&#125;</span><br><span class="line">echo &quot;姓名：$&#123;name&#125;,年龄：$&#123;age&#125;&quot;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#执行脚本，参数跟参数之间用空格间隔</span><br><span class="line">./hello.sh John 19</span><br></pre></td></tr></table></figure>
+<h3 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$&#123;0&#125;该位置变量为特殊变量，表示文件名字</span><br><span class="line">$#表示参数个数，注意：写作$&#123;#&#125;也可以，👇的同理</span><br><span class="line">$*表示参数列表：会将所有的参数组成一个字符串</span><br><span class="line">$@表示参数列表：所有的参数会分开</span><br><span class="line">$$表示获取当前shell的进程id</span><br><span class="line">$!表示执行上一个指令的进程id（PID）</span><br><span class="line">$&#123;?&#125;该位置变量表示返回上一个命令执行状态返回值：</span><br><span class="line">0：表示执行成功；</span><br><span class="line">1：表示程序执行的结果；</span><br><span class="line">2：表示程序状态的返回码（0-255</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;0&#125;</span><br><span class="line">echo $&#123;?&#125;</span><br><span class="line">#下面语法错误</span><br><span class="line">name = &quot;haah&quot;</span><br><span class="line">echo $&#123;?&#125;</span><br></pre></td></tr></table></figure>
+<p>执行脚步后输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">./hello.sh: line 5: name: command not found</span><br><span class="line">127</span><br></pre></td></tr></table></figure></p>
+<p>变量定义：<br>定义变量不适用💲符号，使用该符号表示取该变量的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#定义name变量</span><br><span class="line">name=&quot;xiaoming&quot;</span><br><span class="line"></span><br><span class="line">#取name值</span><br><span class="line">$name</span><br></pre></td></tr></table></figure></p>
+<p>定义变量时，变量名和=符号之间不能有空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#错误写法</span><br><span class="line">name = &quot;xiaoming&quot;</span><br><span class="line">name =&quot;xiaoming&quot;</span><br><span class="line">name= &quot;xiaoming&quot;</span><br></pre></td></tr></table></figure></p>
+<p>变量名首字母必须为字母(a-z,A-Z)或者下划线<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age=10</span><br><span class="line"></span><br><span class="line">echo $age</span><br></pre></td></tr></table></figure></p>
+<h3 id="只读变量"><a href="#只读变量" class="headerlink" title="只读变量"></a>只读变量</h3><p>使用关键字<strong>readonly</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=&quot;zhima&quot;</span><br><span class="line">readonly name</span><br></pre></td></tr></table></figure></p>
+<h3 id="删除掉变量"><a href="#删除掉变量" class="headerlink" title="删除掉变量"></a>删除掉变量</h3><p>使用关键字<strong>unset</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=&quot;zhima&quot;</span><br><span class="line">unset name</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -485,8 +504,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/15/初始Shell/" rel="next" title="初始Shell">
-                <i class="fa fa-chevron-left"></i> 初始Shell
+              <a href="/2017/08/15/初识Shell/" rel="next" title="初识Shell">
+                <i class="fa fa-chevron-left"></i> 初识Shell
               </a>
             
           </div>
@@ -542,8 +561,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +700,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量类型："><span class="nav-number">2.</span> <span class="nav-text">变量类型：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类型一：本地变量"><span class="nav-number">2.1.</span> <span class="nav-text">类型一：本地变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型二：局部变量"><span class="nav-number">2.2.</span> <span class="nav-text">类型二：局部变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型三：环境变量"><span class="nav-number">2.3.</span> <span class="nav-text">类型三：环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型四：位置变量"><span class="nav-number">2.4.</span> <span class="nav-text">类型四：位置变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊变量"><span class="nav-number">2.5.</span> <span class="nav-text">特殊变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只读变量"><span class="nav-number">2.6.</span> <span class="nav-text">只读变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除掉变量"><span class="nav-number">2.7.</span> <span class="nav-text">删除掉变量</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

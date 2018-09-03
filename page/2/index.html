@@ -394,7 +394,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:32:18" itemprop="dateModified" datetime="2018-09-03T17:32:18+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:38:41" itemprop="dateModified" datetime="2018-09-03T18:38:41+08:00">2018-09-03</time>
               
             
           </span>
@@ -447,8 +447,13 @@
       
         
           
-          
-          
+          MySQL操作命令：连接(登录)数据库：1mysql -u 用户名 -p
+12mysql -u root -p//然后输入密码
+退出数据库：1mysql&gt; exit
+显示所有的数据库1mysql&gt; show databases
+进入数据库mysql&gt; use 库名1`mysql&gt; use db_test`
+删除数据库1mysql&gt
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/23/mysql数据库操作/#more" rel="contents">
@@ -573,7 +578,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:31:38" itemprop="dateModified" datetime="2018-09-03T17:31:38+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:29:51" itemprop="dateModified" datetime="2018-09-03T18:29:51+08:00">2018-09-03</time>
               
             
           </span>
@@ -626,8 +631,9 @@
       
         
           
-          
-          
+          函数使用function关键字来定义函数语法：123function 函数名()&#123;    ...&#125;
+带参数的函数：12345678function add()&#123;    echo &quot;第一个参数 文件名字：$0&quot;    echo &quot;第二个参数: $1&quot;    echo &quot;第三个参数:
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/21/Shell函数和管道以及bash计算器/#more" rel="contents">
@@ -752,7 +758,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:30:27" itemprop="dateModified" datetime="2018-09-03T17:30:27+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:27:18" itemprop="dateModified" datetime="2018-09-03T18:27:18+08:00">2018-09-03</time>
               
             
           </span>
@@ -805,8 +811,12 @@
       
         
           
-          
-          
+          文件包含方式一文件a： a.sh12!#/bin/bashecho &quot;a&quot;
+文件b： b.sh123!#/bin/bash./a.shecho &quot;b
+此时文件b包含了文件a，执行b文件，就会把文件a和文件b的内容都执行
+方式二 使用关键字source123!#/bin/bashsource ./a.shecho &quot;b
+
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/20/Shell文件操作相关/#more" rel="contents">
@@ -931,7 +941,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:29:05" itemprop="dateModified" datetime="2018-09-03T17:29:05+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:16:37" itemprop="dateModified" datetime="2018-09-03T18:16:37+08:00">2018-09-03</time>
               
             
           </span>
@@ -984,8 +994,16 @@
       
         
           
-          
-          
+          关系运算符
+布尔运算符
+逻辑运算符
+字符串运算符
+文件测试运算符
+.expr命令
+加法运算符使用使用expr外部样式（通用方式）1234a=1000b=3000r=`expr $a + $b`echo $r
+使用 $(($a + $b))1234a=1000b=3000r=$(($a + $b))echo $r $d
+使用$[$a + $b]1234a=10
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/17/Shell运算符/#more" rel="contents">
@@ -1110,7 +1128,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:28:25" itemprop="dateModified" datetime="2018-09-03T17:28:25+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:09:28" itemprop="dateModified" datetime="2018-09-03T18:09:28+08:00">2018-09-03</time>
               
             
           </span>
@@ -1163,8 +1181,11 @@
       
         
           
-          
-          
+          声明一个数组1nameArray=(&quot;Mike&quot; &quot;Bill&quot; &quot;John&quot;)
+给数组增加值或者替换值1nameArray[3]=&quot;Gil&quot;
+默认只输出数组第一个值1echo $nameArray
+输出下标指定的值1echo $&#123;nameArray[1]&#125; $
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/17/Shell数组/#more" rel="contents">
@@ -1289,7 +1310,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:27:42" itemprop="dateModified" datetime="2018-09-03T17:27:42+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:07:45" itemprop="dateModified" datetime="2018-09-03T18:07:45+08:00">2018-09-03</time>
               
             
           </span>
@@ -1342,8 +1363,10 @@
       
         
           
-          
-          
+          输出字符串 默认 带有换行:echo “字符串 哈哈”输出字符串 不换行 -e表示开启转义功能:12echo -e &quot;不换行1\c&quot;echo -e &quot;不换行2&quot;
+字符串内部换行:1echo -e &quot;开启了转义的字符串\n哈哈&quot;
+输出转义字符串:1echo &quot; &quot;这是一个转义字符&
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/16/echo命令/#more" rel="contents">
@@ -1468,7 +1491,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:26:52" itemprop="dateModified" datetime="2018-09-03T17:26:52+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 18:04:09" itemprop="dateModified" datetime="2018-09-03T18:04:09+08:00">2018-09-03</time>
               
             
           </span>
@@ -1521,8 +1544,9 @@
       
         
           
-          
-          
+          shell中字符串使用单、双引号均可:1234name=&apos;andy&apos;id=&quot;haha&quot;echo $nameecho $id
+字符串拼接：方式一123456#!/bin/bashname=&apos;andy&apos;id=&quot;haha&quot;#可以缩写为total=&quot;$name$id&quot;
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/16/Shell中的字符串操作/#more" rel="contents">
@@ -1647,7 +1671,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:26:16" itemprop="dateModified" datetime="2018-09-03T17:26:16+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:55:19" itemprop="dateModified" datetime="2018-09-03T17:55:19+08:00">2018-09-03</time>
               
             
           </span>
@@ -1700,8 +1724,12 @@
       
         
           
-          
-          
+          注释shell语法使用#来注释内容：1234#!/bin/bash#这是一段注释echo &quot;hello world&quot;
+shell中没有多行注释，只有单行注释
+变量类型：类型一：本地变量作用域是整个bash进程语法：name=”Mike”
+类型二：局部变量作用域是当前代码段语法：local name=”Sun”
+类型三：环境变量作用域是当前
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/15/Shell变量/#more" rel="contents">
@@ -1763,7 +1791,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/初始Shell/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/初识Shell/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zyf">
@@ -1782,8 +1810,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/15/初始Shell/" itemprop="url">
-                  初始Shell
+                <a class="post-title-link" href="/2017/08/15/初识Shell/" itemprop="url">
+                  初识Shell
                 </a>
               
             
@@ -1826,7 +1854,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-03 17:25:19" itemprop="dateModified" datetime="2018-09-03T17:25:19+08:00">2018-09-03</time>
+                <time title="Modified: 2018-09-03 17:47:05" itemprop="dateModified" datetime="2018-09-03T17:47:05+08:00">2018-09-03</time>
               
             
           </span>
@@ -1879,11 +1907,14 @@
       
         
           
-          
-          
+          shell作为程序员与内核系统交流的中间件，语言有很多种类，常用的是Bash。
+创建一个简单的shell程序，输出helloworld：创建shell文件：1touch hello.sh
+定义文件声明：1#!/bin/bash
+(#!表示约定标记，告诉系统这个脚本需要什么样的解释器来执行，也是脚本的一种体现)要执行的命令1echo &quot;helllo 
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/15/初始Shell/#more" rel="contents">
+            <a class="btn" href="/2017/08/15/初识Shell/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
