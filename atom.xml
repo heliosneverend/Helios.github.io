@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-03T07:51:05.532Z</updated>
+  <updated>2018-09-03T08:05:04.634Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,200 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>赫夫曼树和赫夫曼编码</title>
+    <link href="http://yoursite.com/2018/09/03/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%92%8C%E8%B5%AB%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
+    <id>http://yoursite.com/2018/09/03/赫夫曼树和赫夫曼编码/</id>
+    <published>2018-09-03T08:04:25.000Z</published>
+    <updated>2018-09-03T08:05:04.634Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二叉树</title>
+    <link href="http://yoursite.com/2018/09/03/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>http://yoursite.com/2018/09/03/二叉树/</id>
+    <published>2018-09-03T08:03:59.000Z</published>
+    <updated>2018-09-03T08:04:59.846Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树及存储结构</title>
+    <link href="http://yoursite.com/2018/09/03/%E6%A0%91%E5%8F%8A%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2018/09/03/树及存储结构/</id>
+    <published>2018-09-03T08:03:46.000Z</published>
+    <updated>2018-09-03T08:05:17.100Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串匹配的BF算法和KMP算法</title>
+    <link href="http://yoursite.com/2018/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%9A%84BF%E7%AE%97%E6%B3%95%E5%92%8CKMP%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/09/03/字符串匹配的BF算法和KMP算法/</id>
+    <published>2018-09-03T08:03:20.000Z</published>
+    <updated>2018-09-03T08:05:47.586Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>栈和队列</title>
+    <link href="http://yoursite.com/2018/09/03/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/"/>
+    <id>http://yoursite.com/2018/09/03/栈和队列/</id>
+    <published>2018-09-03T08:02:56.000Z</published>
+    <updated>2018-09-03T08:05:42.146Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>双向链表</title>
+    <link href="http://yoursite.com/2018/09/03/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
+    <id>http://yoursite.com/2018/09/03/双向链表/</id>
+    <published>2018-09-03T08:02:42.000Z</published>
+    <updated>2018-09-03T08:05:24.214Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>循环链表</title>
+    <link href="http://yoursite.com/2018/09/03/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/"/>
+    <id>http://yoursite.com/2018/09/03/循环链表/</id>
+    <published>2018-09-03T08:02:32.000Z</published>
+    <updated>2018-09-03T08:05:37.223Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>静态链表</title>
+    <link href="http://yoursite.com/2018/09/03/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/"/>
+    <id>http://yoursite.com/2018/09/03/静态链表/</id>
+    <published>2018-09-03T08:02:24.000Z</published>
+    <updated>2018-09-03T08:05:11.798Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单向链表的整表操作</title>
+    <link href="http://yoursite.com/2018/09/03/%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E7%9A%84%E6%95%B4%E8%A1%A8%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2018/09/03/单向链表的整表操作/</id>
+    <published>2018-09-03T08:02:00.000Z</published>
+    <updated>2018-09-03T08:04:54.436Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性表</title>
+    <link href="http://yoursite.com/2018/09/03/%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
+    <id>http://yoursite.com/2018/09/03/线性表/</id>
+    <published>2018-09-03T08:00:53.000Z</published>
+    <updated>2018-09-03T08:05:31.697Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>度量算法效率的方法</title>
     <link href="http://yoursite.com/2018/09/03/%E5%BA%A6%E9%87%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2018/09/03/度量算法效率的方法/</id>
     <published>2018-09-03T07:50:25.000Z</published>
-    <updated>2018-09-03T07:51:05.532Z</updated>
+    <updated>2018-09-03T07:58:58.568Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。</p><p>算法的时间复杂度，也就是算法的时间量度，记做T(n)=O(f(n))。<br>他表示随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称作算法的渐进时间复杂度，简称为时间复杂度。其中，f(n)是问题的规模n的某个函数。</p><p>这样用大写字母O来体现算法时间复杂度的记法，常称之为大O记法。</p><h2 id="如何推导时间复杂度："><a href="#如何推导时间复杂度：" class="headerlink" title="如何推导时间复杂度："></a>如何推导时间复杂度：</h2><p>用常数1来取代运行时间中所有加法常数，如：1+2+3 = 1,记为O(1)<br>在修改后的运行次数函数中，只保留最高阶项，如：n+n^2 = n^2,记为O(n^2)<br>如果最高阶项存在且不是1，则去除与这个项相乘的常数，如：3n^2 = n^2,记为O(n^2)</p><h2 id="计算下面程序的时间复杂度"><a href="#计算下面程序的时间复杂度" class="headerlink" title="计算下面程序的时间复杂度"></a>计算下面程序的时间复杂度</h2><p>例题1：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int a = 0;</span><br><span class="line">int b = 0;</span><br><span class="line">int c = a + b;</span><br><span class="line">printf(&quot;hello world&quot;);</span><br><span class="line">答案 O(1)</span><br></pre></td></tr></table></figure></p><p>例题2:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0 ; i &lt; 100; i++) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">答案 O(n)</span><br></pre></td></tr></table></figure></p><p>例题3:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0 ; i &lt; 100; i++) &#123;</span><br><span class="line">    for (int j = 0 ; j &lt; 100; j++) &#123;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">答案:O(n^2)</span><br></pre></td></tr></table></figure></p><p>例题4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0 ; i &lt; 100; i++) &#123;</span><br><span class="line">    for (int j = i ; j &lt; i; j++) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//分析：执行次数 = n + (n-1) + (n-2) +...+1 = n * (n + 1) / 2 = (n^2) / 2 + n / 2</span><br><span class="line">答案: O(n^2)</span><br></pre></td></tr></table></figure></p><p>例题5:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    int i = 1, n = 100;</span><br><span class="line">    while (i &lt; n) &#123;</span><br><span class="line">        i = i * 2;</span><br><span class="line">    &#125;</span><br><span class="line">//分析：退出条件是2*x = = n，可以得到x = log(2)n -- 以2为底，n的对数</span><br><span class="line">答案:O(logn)</span><br></pre></td></tr></table></figure></p><h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>算法的空间复杂度：通过计算算法所需的存储空间实现，算法的空间复杂度的计算公式记为：S(n) = O(f(n)),其中，n为问题的规模，f(n)为语句关于n所占存储空间的函数。</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;时间复杂度&quot;&gt;&lt;a href=&quot;#时间复杂度&quot; class=&quot;headerlink&quot; title=&quot;时间复杂度&quot;&gt;&lt;/a&gt;时间复杂度&lt;/h1&gt;&lt;p&gt;在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量
+      
     
     </summary>
     
