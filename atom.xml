@@ -128,6 +128,42 @@
   </entry>
   
   <entry>
+    <title>前端基础</title>
+    <link href="http://yoursite.com/2018/04/02/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2018/04/02/前端基础/</id>
+    <published>2018-04-02T04:26:59.000Z</published>
+    <updated>2018-09-03T09:39:34.590Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python基础</title>
+    <link href="http://yoursite.com/2018/02/27/Python%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2018/02/27/Python基础/</id>
+    <published>2018-02-27T00:11:25.000Z</published>
+    <updated>2018-09-03T09:38:06.508Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Shell多终端间发送消息</title>
     <link href="http://yoursite.com/2017/08/31/Shell%E5%A4%9A%E7%BB%88%E7%AB%AF%E9%97%B4%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/"/>
     <id>http://yoursite.com/2017/08/31/Shell多终端间发送消息/</id>
@@ -358,57 +394,6 @@
       
         &lt;p&gt;给定n个权值作为n个[叶子结点]，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。&lt;/p&gt;
 &lt;p&gt;哈夫曼静态编码：它对需要编码的数据进行两遍扫描：第
-      
-    
-    </summary>
-    
-      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二叉树</title>
-    <link href="http://yoursite.com/2017/01/01/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-    <id>http://yoursite.com/2017/01/01/二叉树/</id>
-    <published>2017-01-01T12:03:59.000Z</published>
-    <updated>2018-09-03T09:19:28.950Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树的二叉树组成。<br>左子树和右子树位置不可颠倒。</p><h2 id="二叉树的形态："><a href="#二叉树的形态：" class="headerlink" title="二叉树的形态："></a>二叉树的形态：</h2><p><img src="二叉树1.png" alt=""></p><h3 id="斜二叉树"><a href="#斜二叉树" class="headerlink" title="斜二叉树"></a>斜二叉树</h3><p>子树全部在一个方向</p><h3 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h3><p>满二叉树的特点有：<br>叶子只能出现在最下一层。<br>非叶子结点的度一定是2。<br>在同样深度的二叉树中，满二叉树的结点个数一定最多，同时叶子也是最多。</p><h3 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h3><h2 id="二叉树的存储"><a href="#二叉树的存储" class="headerlink" title="二叉树的存储"></a>二叉树的存储</h2><p>二叉链表</p><h2 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h2><p>二叉树的遍历(traversing binary tree)是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。</p><p>二叉树的遍历方式可以很多，如果我们限制了从左到右的习惯方式，那么主要就分为一下四种：</p><p>前序遍历<br>中序遍历<br>后序遍历<br>层序遍历</p><h3 id="前序遍历："><a href="#前序遍历：" class="headerlink" title="前序遍历："></a>前序遍历：</h3><p>若二叉树为空，则空操作返回，否则先访问根结点，然后前序遍历左子树，再前序遍历右子树<br><img src="二叉树2.png" alt=""></p><h3 id="中序遍历："><a href="#中序遍历：" class="headerlink" title="中序遍历："></a>中序遍历：</h3><p>若树为空，则空操作返回，否则从根结点开始（注意并不是先访问根结点），中序遍历根结点的左子树，然后是访问根结点，最后中序遍历右子树。<br><img src="二叉树3.png" alt=""></p><h3 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h3><p>若树为空，则空操作返回，否则从左到右先叶子后结点的方式遍历访问左右子树，最后访问根结点。<br><img src="二叉树4.png" alt=""></p><h3 id="层序遍历"><a href="#层序遍历" class="headerlink" title="层序遍历"></a>层序遍历</h3><p>若树为空，则空操作返回，否则从树的第一层，也就是根结点开始访问，从上而下逐层遍历，在同一层中，按从左到右的顺序对结点逐个访问。<br><img src="二叉树5.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;二叉树&quot;&gt;&lt;a href=&quot;#二叉树&quot; class=&quot;headerlink&quot; title=&quot;二叉树&quot;&gt;&lt;/a&gt;二叉树&lt;/h2&gt;&lt;p&gt;二叉树（Binary Tree）是n（n&amp;gt;=0）个结点的有限集合，该集合或者为空集（空二叉树），或者由一个根结点和两棵互不相交
-      
-    
-    </summary>
-    
-      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树及存储结构</title>
-    <link href="http://yoursite.com/2016/12/03/%E6%A0%91%E5%8F%8A%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2016/12/03/树及存储结构/</id>
-    <published>2016-12-03T08:03:46.000Z</published>
-    <updated>2018-09-03T09:15:02.924Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><p>不同于1对1的线性数据结构，树是一种一对多的存储结构。</p><p>树(Tree)是n(n&gt;=0)个结点的有限集。当n=0时成为空树，在任意一棵非空树中：</p><p>有且仅有一个特定的称为根(Root)的结点；<br>当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集T1、T2、…、Tm，其中每一个集合本身又是一棵树，并且称为根的子树(SubTree)。<br><img src="树1.png" alt=""></p><h2 id="节点分类："><a href="#节点分类：" class="headerlink" title="节点分类："></a>节点分类：</h2><p>上面图片中，每一个圈圈我们就称为树的一个结点。结点拥有的子树数称为结点的度-(Degree)，树的度 取树内各结点的度的最大值：</p><p>度为0的结点称为叶结点(Leaf)或终端结点；<br>度不为0的结点称为分支结点或非终端结点，除根结点外，分支结点也称为内部结点。<br><img src="树2.png" alt=""></p><h2 id="节点间的关系："><a href="#节点间的关系：" class="headerlink" title="节点间的关系："></a>节点间的关系：</h2><p>结点的子树的根称为结点的孩子(Child)，相应的，该结点称为孩子的双亲(Parent)，同一双亲的孩子之间互称为兄弟(Sibling)。<br>结点的祖先是从根到该结点所经分支上的所有结点。</p><h2 id="节点的层次："><a href="#节点的层次：" class="headerlink" title="节点的层次："></a>节点的层次：</h2><p>结点的层次(Level)从根开始定一起，根为第一层，根的孩子为第二层。<br>其双亲在同一层的结点互为堂兄弟。<br>树中结点的最大层次称为树的深度(Depth)或高度</p><h2 id="有序树："><a href="#有序树：" class="headerlink" title="有序树："></a>有序树：</h2><p>若将树中每个结点的各子树看成是从左到右有次序的(即不能互换)，则称该树为有序树(Ordered Tree)；<br>否则称为无序树(UnorderedTree)。</p><h2 id="森林："><a href="#森林：" class="headerlink" title="森林："></a>森林：</h2><p>森林是m（m &gt;= 0）棵互不相交的树的集合。<br>对树中的每个结点而言，其子树的集合即为森林。</p><h2 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h2><p>双亲孩子表示法</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;树&quot;&gt;&lt;a href=&quot;#树&quot; class=&quot;headerlink&quot; title=&quot;树&quot;&gt;&lt;/a&gt;树&lt;/h2&gt;&lt;p&gt;不同于1对1的线性数据结构，树是一种一对多的存储结构。&lt;/p&gt;
-&lt;p&gt;树(Tree)是n(n&amp;gt;=0)个结点的有限集。当n=0时成为空树，在任意
       
     
     </summary>
