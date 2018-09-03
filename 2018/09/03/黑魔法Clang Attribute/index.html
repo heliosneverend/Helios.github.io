@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法1234567891011121314func backToViewController(className: String, animated: Bool) &amp;#123;          if ((self.navigationController) != nil) &amp;#123;">
-<meta name="keywords" content="function">
+  <meta name="description" content="##Clang Attribute 说明Clang Attribute 是Clang提供的一种源码注解,一般以attribute(xxx) 的形式出现在代码中 ##constructor / destructor构造器和析构器，加上这两个属性的函数会在分别在可执行文件（或 shared library）load 和 unload 时被调用，可以理解为在 main() 函数调用前和 return 后">
+<meta name="keywords" content="OC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swift和OC返回指定页面">
-<meta property="og:url" content="http://yoursite.com/2018/08/27/swift和OC返回指定页面/index.html">
+<meta property="og:title" content="黑魔法Clang Attribute">
+<meta property="og:url" content="http://yoursite.com/2018/09/03/黑魔法Clang Attribute/index.html">
 <meta property="og:site_name" content="Heliso">
-<meta property="og:description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法1234567891011121314func backToViewController(className: String, animated: Bool) &amp;#123;          if ((self.navigationController) != nil) &amp;#123;">
+<meta property="og:description" content="##Clang Attribute 说明Clang Attribute 是Clang提供的一种源码注解,一般以attribute(xxx) 的形式出现在代码中 ##constructor / destructor构造器和析构器，加上这两个属性的函数会在分别在可执行文件（或 shared library）load 和 unload 时被调用，可以理解为在 main() 函数调用前和 return 后">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-31T09:18:34.852Z">
+<meta property="og:updated_time" content="2018-09-03T06:20:51.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swift和OC返回指定页面">
-<meta name="twitter:description" content="VC 多层 push后回到指定页面的几种方法写一个ViewController的类方法,核心方法1234567891011121314func backToViewController(className: String, animated: Bool) &amp;#123;          if ((self.navigationController) != nil) &amp;#123;">
+<meta name="twitter:title" content="黑魔法Clang Attribute">
+<meta name="twitter:description" content="##Clang Attribute 说明Clang Attribute 是Clang提供的一种源码注解,一般以attribute(xxx) 的形式出现在代码中 ##constructor / destructor构造器和析构器，加上这两个属性的函数会在分别在可执行文件（或 shared library）load 和 unload 时被调用，可以理解为在 main() 函数调用前和 return 后">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/27/swift和OC返回指定页面/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/03/黑魔法Clang Attribute/"/>
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>swift和OC返回指定页面 | Heliso</title>
+  <title>黑魔法Clang Attribute | Heliso</title>
   
 
 
@@ -343,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/27/swift和OC返回指定页面/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/03/黑魔法Clang Attribute/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zyf">
@@ -360,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">swift和OC返回指定页面
+          <h1 class="post-title" itemprop="name headline">黑魔法Clang Attribute
               
             
           </h1>
@@ -385,24 +385,12 @@
                 
               
 
-              <time title="Created: 2018-08-27 16:09:05" itemprop="dateCreated datePublished" datetime="2018-08-27T16:09:05+08:00">2018-08-27</time>
+              <time title="Created: 2018-09-03 11:07:16 / Modified: 14:20:51" itemprop="dateCreated datePublished" datetime="2018-09-03T11:07:16+08:00">2018-09-03</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-08-31 17:18:34" itemprop="dateModified" datetime="2018-08-31T17:18:34+08:00">2018-08-31</time>
               
             
           </span>
@@ -435,8 +423,25 @@
       
 
       
-        <h1 id="VC-多层-push后回到指定页面的几种方法"><a href="#VC-多层-push后回到指定页面的几种方法" class="headerlink" title="VC 多层 push后回到指定页面的几种方法"></a>VC 多层 push后回到指定页面的几种方法</h1><p>写一个ViewController的类方法,核心方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func backToViewController(className: String, animated: Bool) &#123;  </span><br><span class="line">        if ((self.navigationController) != nil) &#123;  </span><br><span class="line">            let controllers: Array = (self.navigationController?.viewControllers) ?? []  </span><br><span class="line">            let res = controllers.filter &#123; (item) -&gt; Bool in  </span><br><span class="line">                guard let aClass = NSClassFromString(className) else &#123;  </span><br><span class="line">                return false  </span><br><span class="line">            &#125;  </span><br><span class="line">            return item.isKind(of: aClass)  </span><br><span class="line">        &#125;  </span><br><span class="line">        if (res.count &gt; 0) &#123;  </span><br><span class="line">            self.navigationController?.popToViewController(res[0], animated: animated)  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/heliosneverend/popToViewController.git" target="_blank" rel="noopener">示例代码Demo</a></p>
+        <p>##Clang Attribute 说明<br>Clang Attribute 是Clang提供的一种源码注解,一般以<strong>attribute</strong>(xxx) 的形式出现在代码中</p>
+<p>##constructor / destructor<br>构造器和析构器，加上这两个属性的函数会在分别在可执行文件（或 shared library）load 和 unload 时被调用，可以理解为在 main() 函数调用前和 return 后执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((constructor))</span><br><span class="line">static void beforeMain(void) &#123;</span><br><span class="line">NSLog(@&quot;beforeMain&quot;);</span><br><span class="line">&#125;</span><br><span class="line">__attribute__((destructor))</span><br><span class="line">static void afterMain(void) &#123;</span><br><span class="line">NSLog(@&quot;afterMain&quot;);</span><br><span class="line">&#125;</span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">NSLog(@&quot;main&quot;);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Console:</span><br><span class="line">// &quot;beforeMain&quot; -&gt; &quot;main&quot; -&gt; &quot;afterMain&quot;</span><br></pre></td></tr></table></figure></p>
+<p>constructor 和 +load 都是在 main 函数执行前调用，但 +load 比 constructor 更加早一丢丢，因为 dyld（动态链接器，程序的最初起点）在加载 image（可以理解成 Mach-O 文件）时会先通知 objc runtime 去加载其中所有的类，每加载一个类时，它的 +load 随之调用，全部加载完成后，dyld 才会调用这个 image 中所有的 constructor 方法。</p>
+<p>所以 constructor 是一个干坏事的绝佳时机：</p>
+<p>所有 Class 都已经加载完成<br>main 函数还未执行<br>无需像 +load 还得挂载在一个 Class 中<br>FDStackView 的 FDStackViewPatchEntry 方法便是使用的这个时机来实现偷天换日的伎俩。<br>PS：若有多个 constructor 且想控制优先级的话，可以写成 <strong>attribute</strong>((constructor(101)))，里面的数字越小优先级越高，1 ~ 100 为系统保留。</p>
+<p>##enable_if<br>这个属性只能用在 C 函数上，可以用来实现参数的静态检查：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">static void printValidAge(int age)</span><br><span class="line">__attribute__((enable_if(age &gt; 0 &amp;&amp; age &lt; 120, &quot;你火星人？&quot;))) &#123;</span><br><span class="line">printf(&quot;%d&quot;, age);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>它表示调用这个函数时必须满足 age &gt; 0 &amp;&amp; age &lt; 120 才被允许，于是乎：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">printValidAge(26); // √</span><br><span class="line">printValidAge(150); // &lt;--- Compile Error</span><br><span class="line">printValidAge(-1); // &lt;--- Compile Error</span><br></pre></td></tr></table></figure></p>
+<p>##cleanup<br>声明到一个变量上，当这个变量作用域结束时，调用指定的一个函数，Reactive Cocoa 用这个特性实现了神奇的 @onExit</p>
+<p>##overloadable<br>用于 C 函数，可以定义若干个函数名相同，但参数不同的方法，调用时编译器会自动根据参数选择函数原型：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((overloadable)) void logAnything(id obj) &#123;</span><br><span class="line">NSLog(@&quot;%@&quot;, obj);</span><br><span class="line">&#125;</span><br><span class="line">__attribute__((overloadable)) void logAnything(int number) &#123;</span><br><span class="line">NSLog(@&quot;%@&quot;, @(number));</span><br><span class="line">&#125;</span><br><span class="line">__attribute__((overloadable)) void logAnything(CGRect rect) &#123;</span><br><span class="line">NSLog(@&quot;%@&quot;, NSStringFromCGRect(rect));</span><br><span class="line">&#125;</span><br><span class="line">// Tests</span><br><span class="line">logAnything(@[@&quot;1&quot;, @&quot;2&quot;]);</span><br><span class="line">logAnything(233);</span><br><span class="line">logAnything(CGRectMake(1, 2, 3, 4));</span><br></pre></td></tr></table></figure></p>
+<p>##objc_subclassing_restricted<br>使用这个属性可以定义一个不可被继承的类,只需在@interface前面加上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((objc_subclassing_restricted))即可</span><br><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">__attribute__((objc_subclassing_restricted))</span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line">@interface Child: Person //Cannot subclass a class that was declared with the &apos;objc_subclassing_restricted&apos; attribute</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<p>##objc_requires_super<br>NS_REQUIRES_SUPER 子类继承该方法时需要调用 super 否则给出编译警告<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@interface Person : NSObject</span><br><span class="line">- (void)fatherMethod __attribute__((objc_requires_super));</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Child</span><br><span class="line">- (void)fatherMethod &#123;</span><br><span class="line"> //Method possibly missing a [super fatherMethod] call</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<p>##objc_runtime_name<br>用于 @interface 或 @protocol，将类或协议的名字在编译时指定成另一个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((objc_runtime_name(&quot;SarkGay&quot;)))</span><br><span class="line">@interface Sark : NSObject</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">NSLog(@&quot;%@&quot;, NSStringFromClass([Sark class])); // &quot;SarkGay&quot;</span><br></pre></td></tr></table></figure></p>
+<p>所有直接使用这个类名的地方都会被替换（唯一要注意的是这时用反射就不对了），最简单粗暴的用处就是去做个类名混淆：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((objc_runtime_name(&quot;40ea43d7629d01e4b8d6289a132482d0dd5df4fa&quot;)))</span><br><span class="line">@interface SecretClass : NSObject</span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<p>还能用数字开头，怕不怕 - -，假如写个脚本把每个类前加个随机生成的 objc_runtime_name，岂不是最最精简版的代码混淆就完成了呢…</p>
+<p>它是我所了解的唯一一个对 objc 运行时类结构有影响的 attribute，通过编码类名可以在编译时注入一些信息，被带到运行时之后，再反解出来，这就相当于开设了一条秘密通道，打通了写码时和运行时。脑洞一下，假如把这个 attribute 定义成宏，以 annotation 的形式完成某些功能，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// @singleton 包裹了 __attribute__((objc_runtime_name(...)))</span><br><span class="line">// 将类名改名成 &quot;SINGLETON_Sark_sharedInstance&quot;</span><br><span class="line">@singleton(Sark, sharedInstance)</span><br><span class="line">@interface Sark : NSObject</span><br><span class="line">+ (instancetype)sharedInstance;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<p>在运行时用 <strong>attribute</strong>((constructor)) 获取入口时机，用 runtime 找到这个类，反解出 “sharedInstance” 这个 selector 信息，动态将 + alloc，- init 等方法替换，返回 + sharedInstance 单例。</p>
+<p>##objc_boxable<br>Objective-C 中的 @(…) 语法糖可以将基本数据类型 box 成 NSNumber 对象，假如想 box 一个 struct 类型或是 union 类型成 NSValue 对象，可以使用这个属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">typedef struct __attribute__((objc_boxable)) &#123;</span><br><span class="line">CGFloat x, y, width, height;</span><br><span class="line">&#125; XXRect;</span><br></pre></td></tr></table></figure></p>
+<p>这样一来，XXRect 就具备被 box 的能力：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CGRect rect1 = &#123;1, 2, 3, 4&#125;;</span><br><span class="line">NSValue *value1 = @(rect1); // &lt;--- Compile Error</span><br><span class="line">XXRect rect2 = &#123;1, 2, 3, 4&#125;;</span><br><span class="line">NSValue *value2 = @(rect2); // √</span><br></pre></td></tr></table></figure></p>
+<p>##References<br><a href="https://blog.sunnyxx.com/2016/05/14/clang-attributes/" target="_blank" rel="noopener">参考地址</a></p>
 
       
     </div>
@@ -467,7 +472,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/function/" rel="tag"><i class="fa fa-tag"></i> function</a>
+            <a href="/tags/OC/" rel="tag"><i class="fa fa-tag"></i> OC</a>
           
         </div>
       
@@ -480,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/27/记录苹果设备唯一账号/" rel="next" title="记录苹果设备唯一账号">
-                <i class="fa fa-chevron-left"></i> 记录苹果设备唯一账号
+              <a href="/2018/09/03/React入门/" rel="next" title="React入门">
+                <i class="fa fa-chevron-left"></i> React入门
               </a>
             
           </div>
@@ -489,10 +494,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/03/React入门/" rel="prev" title="React入门">
-                React入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -537,17 +538,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -643,22 +635,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VC-多层-push后回到指定页面的几种方法"><span class="nav-number">1.</span> <span class="nav-text">VC 多层 push后回到指定页面的几种方法</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
