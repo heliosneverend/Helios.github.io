@@ -108,13 +108,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Heliso">
-<meta property="og:url" content="http://yoursite.com/archives/2018/09/index.html">
+  <meta name="description" content="应用场景UITableView或UICollectionView和UIScrollView在添加下拉刷新的时候,业务需求在refreshControl显示特定的颜色 不同于UITableView.backgroundColor 解决思路croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色这个方案在数据较少的时候会出现问题 在UITableView 图层下面添加一个">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在tableView显示不同的背景色">
+<meta property="og:url" content="http://yoursite.com/2018/09/05/在tableView显示不同的背景色/index.html">
 <meta property="og:site_name" content="Heliso">
+<meta property="og:description" content="应用场景UITableView或UICollectionView和UIScrollView在添加下拉刷新的时候,业务需求在refreshControl显示特定的颜色 不同于UITableView.backgroundColor 解决思路croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色这个方案在数据较少的时候会出现问题 在UITableView 图层下面添加一个">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-05T08:35:39.854Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Heliso">
+<meta name="twitter:title" content="在tableView显示不同的背景色">
+<meta name="twitter:description" content="应用场景UITableView或UICollectionView和UIScrollView在添加下拉刷新的时候,业务需求在refreshControl显示特定的颜色 不同于UITableView.backgroundColor 解决思路croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色这个方案在数据较少的时候会出现问题 在UITableView 图层下面添加一个">
 
 
 
@@ -123,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/09/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/05/在tableView显示不同的背景色/"/>
 
 
 
@@ -133,7 +138,7 @@
   };
 </script>
 
-  <title>Archive | Heliso</title>
+  <title>在tableView显示不同的背景色 | Heliso</title>
   
 
 
@@ -180,7 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://heliosneverend.github.io/" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,7 +282,7 @@
         
         
           
-          <li class="menu-item menu-item-所有文章 menu-item-active">
+          <li class="menu-item menu-item-所有文章">
     <a href="/archives" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />所有文章</a>
   </li>
@@ -289,37 +294,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -345,190 +319,202 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        OK! 31 posts in total. Keep on posting.
-      </span>
-      
+  
 
-      
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/在tableView显示不同的背景色/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zyf">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Heliso">
+    </span>
+
+    
+      <header class="post-header">
 
         
         
+          <h1 class="post-title" itemprop="name headline">在tableView显示不同的背景色
+              
+            
+          </h1>
         
 
-        
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-05 16:20:18 / Modified: 16:35:39" itemprop="dateCreated datePublished" datetime="2018-09-05T16:20:18+08:00">2018-09-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/05/在tableView显示不同的背景色/" itemprop="url">
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
               
-                <span itemprop="name">在tableView显示不同的背景色</span>
+                <span class="post-meta-item-text">In</span>
               
-            </a>
-        
-      </h2>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a></span>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-05T16:20:18+08:00"
-              content="2018-09-05" >
-          09-05
-        </time>
-      </div>
+                
+                
+              
+            </span>
+          
 
-    </header>
-  </article>
+          
+            
+          
 
+          
+          
 
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/03/Shell流程控制/" itemprop="url">
-              
-                <span itemprop="name">Shell流程控制</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-03T17:29:25+08:00"
-              content="2018-09-03" >
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/03/黑魔法Clang Attribute/" itemprop="url">
-              
-                <span itemprop="name">黑魔法Clang Attribute</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-03T11:07:16+08:00"
-              content="2018-09-03" >
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>UITableView或UICollectionView和UIScrollView在添加下拉刷新的时候,业务需求在refreshControl显示特定的颜色 不同于UITableView.backgroundColor</p>
+<h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><h3 id="croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色"><a href="#croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色" class="headerlink" title="croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色"></a>croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色</h3><p>这个方案在数据较少的时候会出现问题</p>
+<h3 id="在UITableView-图层下面添加一个View-在-void-scrollViewDidScroll-UIScrollView-scrollView代理方法里面监听scrollView-contentOffSet-y去动态的改变View的高度"><a href="#在UITableView-图层下面添加一个View-在-void-scrollViewDidScroll-UIScrollView-scrollView代理方法里面监听scrollView-contentOffSet-y去动态的改变View的高度" class="headerlink" title="在UITableView 图层下面添加一个View 在- (void)scrollViewDidScroll:(UIScrollView *)scrollView代理方法里面监听scrollView.contentOffSet.y去动态的改变View的高度"></a>在UITableView 图层下面添加一个View 在- (void)scrollViewDidScroll:(UIScrollView *)scrollView代理方法里面监听scrollView.contentOffSet.y去动态的改变View的高度</h3><p>这种方法在松手的一瞬间出出现短暂的颜色问题 同时也会消耗额外的CPU性能 不是最优解</p>
+<h3 id="在TableView上添加一个子视图-让改视图超出tableView的边界"><a href="#在TableView上添加一个子视图-让改视图超出tableView的边界" class="headerlink" title="在TableView上添加一个子视图,让改视图超出tableView的边界"></a>在TableView上添加一个子视图,让改视图超出tableView的边界</h3><h4 id="OC"><a href="#OC" class="headerlink" title="OC"></a>OC</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CGRect frame = self.tableView.bounds;</span><br><span class="line">frame.origin.y = -frame.size.height;</span><br><span class="line">UIView* grayView = [[UIView alloc] initWithFrame:frame];</span><br><span class="line">grayView.backgroundColor = [UIColor grayColor];</span><br><span class="line">[self.tableView addSubview:grayView];</span><br></pre></td></tr></table></figure>
+<h4 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">extension UITableView &#123;</span><br><span class="line">    func addTopBounceAreaView(color: UIColor = .white) &#123;</span><br><span class="line">        var frame = self.bounds</span><br><span class="line">        frame.origin.y = -frame.size.height</span><br><span class="line">        let view = UIView(frame: frame)</span><br><span class="line">        view.backgroundColor = color</span><br><span class="line">        self.addSubview(view)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://stackoverflow.com/questions/1114587/different-background-colors-for-the-top-and-bottom-of-a-uitableview/51077378#51077378" target="_blank" rel="noopener">参考地址</a></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/03/React入门/" itemprop="url">
-              
-                <span itemprop="name">React入门</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-03T10:50:42+08:00"
-              content="2018-09-03" >
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+      <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/03/Shell流程控制/" rel="next" title="Shell流程控制">
+                <i class="fa fa-chevron-left"></i> Shell流程控制
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -549,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -679,6 +674,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景"><span class="nav-number">1.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决思路"><span class="nav-number">2.</span> <span class="nav-text">解决思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色"><span class="nav-number">2.1.</span> <span class="nav-text">croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在UITableView-图层下面添加一个View-在-void-scrollViewDidScroll-UIScrollView-scrollView代理方法里面监听scrollView-contentOffSet-y去动态的改变View的高度"><span class="nav-number">2.2.</span> <span class="nav-text">在UITableView 图层下面添加一个View 在- (void)scrollViewDidScroll:(UIScrollView *)scrollView代理方法里面监听scrollView.contentOffSet.y去动态的改变View的高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在TableView上添加一个子视图-让改视图超出tableView的边界"><span class="nav-number">2.3.</span> <span class="nav-text">在TableView上添加一个子视图,让改视图超出tableView的边界</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#OC"><span class="nav-number">2.3.1.</span> <span class="nav-text">OC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#swift"><span class="nav-number">2.3.2.</span> <span class="nav-text">swift</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -816,6 +827,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
 
   
 

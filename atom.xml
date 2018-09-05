@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-03T10:21:15.392Z</updated>
+  <updated>2018-09-05T08:35:39.854Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在tableView显示不同的背景色</title>
+    <link href="http://yoursite.com/2018/09/05/%E5%9C%A8tableView%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%90%8C%E7%9A%84%E8%83%8C%E6%99%AF%E8%89%B2/"/>
+    <id>http://yoursite.com/2018/09/05/在tableView显示不同的背景色/</id>
+    <published>2018-09-05T08:20:18.000Z</published>
+    <updated>2018-09-05T08:35:39.854Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>UITableView或UICollectionView和UIScrollView在添加下拉刷新的时候,业务需求在refreshControl显示特定的颜色 不同于UITableView.backgroundColor</p><h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><h3 id="croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色"><a href="#croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色" class="headerlink" title="croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色"></a>croll在UITableView图层下面添加一个固定高度的View去填充你想要的颜色</h3><p>这个方案在数据较少的时候会出现问题</p><h3 id="在UITableView-图层下面添加一个View-在-void-scrollViewDidScroll-UIScrollView-scrollView代理方法里面监听scrollView-contentOffSet-y去动态的改变View的高度"><a href="#在UITableView-图层下面添加一个View-在-void-scrollViewDidScroll-UIScrollView-scrollView代理方法里面监听scrollView-contentOffSet-y去动态的改变View的高度" class="headerlink" title="在UITableView 图层下面添加一个View 在- (void)scrollViewDidScroll:(UIScrollView *)scrollView代理方法里面监听scrollView.contentOffSet.y去动态的改变View的高度"></a>在UITableView 图层下面添加一个View 在- (void)scrollViewDidScroll:(UIScrollView *)scrollView代理方法里面监听scrollView.contentOffSet.y去动态的改变View的高度</h3><p>这种方法在松手的一瞬间出出现短暂的颜色问题 同时也会消耗额外的CPU性能 不是最优解</p><h3 id="在TableView上添加一个子视图-让改视图超出tableView的边界"><a href="#在TableView上添加一个子视图-让改视图超出tableView的边界" class="headerlink" title="在TableView上添加一个子视图,让改视图超出tableView的边界"></a>在TableView上添加一个子视图,让改视图超出tableView的边界</h3><h4 id="OC"><a href="#OC" class="headerlink" title="OC"></a>OC</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CGRect frame = self.tableView.bounds;</span><br><span class="line">frame.origin.y = -frame.size.height;</span><br><span class="line">UIView* grayView = [[UIView alloc] initWithFrame:frame];</span><br><span class="line">grayView.backgroundColor = [UIColor grayColor];</span><br><span class="line">[self.tableView addSubview:grayView];</span><br></pre></td></tr></table></figure><h4 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">extension UITableView &#123;</span><br><span class="line">    func addTopBounceAreaView(color: UIColor = .white) &#123;</span><br><span class="line">        var frame = self.bounds</span><br><span class="line">        frame.origin.y = -frame.size.height</span><br><span class="line">        let view = UIView(frame: frame)</span><br><span class="line">        view.backgroundColor = color</span><br><span class="line">        self.addSubview(view)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><a href="https://stackoverflow.com/questions/1114587/different-background-colors-for-the-top-and-bottom-of-a-uitableview/51077378#51077378" target="_blank" rel="noopener">参考地址</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;应用场景&quot;&gt;&lt;a href=&quot;#应用场景&quot; class=&quot;headerlink&quot; title=&quot;应用场景&quot;&gt;&lt;/a&gt;应用场景&lt;/h2&gt;&lt;p&gt;UITableView或UICollectionView和UIScrollView在添加下拉刷新的时候,业务需求在refre
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+    
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>Shell流程控制</title>
@@ -469,32 +494,6 @@
     
     
       <category term="Shell" scheme="http://yoursite.com/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>赫夫曼树和赫夫曼编码</title>
-    <link href="http://yoursite.com/2017/01/02/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%92%8C%E8%B5%AB%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
-    <id>http://yoursite.com/2017/01/02/赫夫曼树和赫夫曼编码/</id>
-    <published>2017-01-02T02:26:59.000Z</published>
-    <updated>2018-09-03T09:19:44.977Z</updated>
-    
-    <content type="html"><![CDATA[<p>给定n个权值作为n个[叶子结点]，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。</p><p>哈夫曼静态编码：它对需要编码的数据进行两遍扫描：第一遍统计原数据中各字符出现的频率，利用得到的频率值创建哈夫曼树，并必须把树的信息保存起来，即把字符0-255(28=256)的频率值以2-4BYTES的长度顺序存储起来，（用4Bytes的长度存储频率值，频率值的表示范围为0–232-1，这已足够表示大文件中字符出现的频率了）以便解压时创建同样的哈夫曼树进行解压；第二遍则根据第一遍扫描得到的哈夫曼树进行编码，并把编码后得到的码字存储起来。</p><p>哈夫曼动态编码：动态哈夫曼编码使用一棵动态变化的哈夫曼树，对第t+1个字符的编码是根据原始数据中前t个字符得到的哈夫曼树来进行的，编码和解码使用相同的初始哈夫曼树，每处理完一个字符，编码和解码使用相同的方法修改哈夫曼树，所以没有必要为解码而保存哈夫曼树的信息。编码和解码一个字符所需的时间与该字符的编码长度成正比，所以动态哈夫曼编码可实时进行</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;给定n个权值作为n个[叶子结点]，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。&lt;/p&gt;
-&lt;p&gt;哈夫曼静态编码：它对需要编码的数据进行两遍扫描：第
-      
-    
-    </summary>
-    
-      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
