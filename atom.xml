@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-07T03:23:04.161Z</updated>
+  <updated>2018-09-10T08:20:02.776Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Swift闭包</title>
+    <link href="http://yoursite.com/2018/09/10/Swift%E9%97%AD%E5%8C%85/"/>
+    <id>http://yoursite.com/2018/09/10/Swift闭包/</id>
+    <published>2018-09-10T07:45:01.000Z</published>
+    <updated>2018-09-10T08:20:02.776Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="闭包的基本概念"><a href="#闭包的基本概念" class="headerlink" title="闭包的基本概念"></a>闭包的基本概念</h2><p>闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。<br>全局闭包：定义在全局，不捕获外部变量<br>局部闭包：定义在函数内部，会捕获函数里面的变量<br>匿名的闭包表达式：可以捕获上下文的变量</p><h2 id="闭包的表达式语法"><a href="#闭包的表达式语法" class="headerlink" title="闭包的表达式语法"></a>闭包的表达式语法</h2><p>swift中的闭包表达式定义如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; (parameters) -&gt; return type in</span><br><span class="line">    statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>关键字in前面的是闭包的申明部分，类似函数的申明，包括参数的申明和返回值的申明；in后面的部分是闭包的实现。比如swift自带的array的sort函数，调用sort的时候需要传一个compare的闭包进去，代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; (s1: String, s2: String) -&gt; Bool in</span><br><span class="line">    return s1 &gt; s2</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><h3 id="根据上下文推测类型"><a href="#根据上下文推测类型" class="headerlink" title="根据上下文推测类型"></a>根据上下文推测类型</h3><p>上面的sort方法传入的是一个很标准的闭包表达式，在swift中，闭包表达式可以更简单，swift可以根据上下文推断出闭包表达式中参数的类型，以及返回值的类型。比如上面的sort函数，传入的闭包肯定是比较array里面的元素，所以闭包参数的类型肯定和array里面的元素类型一样（在这里是String类型），同样的，作为比较函数，返回值肯定是Bool类型。所以，参数类型和返回值类型都可以根据上下文推断出来，那么在闭包里面就可以直接省略。更简介的代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; s1, s2 in return s1 &gt; s2 &#125; )</span><br></pre></td></tr></table></figure></p><h3 id="省略return关键字"><a href="#省略return关键字" class="headerlink" title="省略return关键字"></a>省略return关键字</h3><p>当闭包的实现只有一行代码的时候，可以省略return关键字。比如在上面的代码中sorted(by:) 函数的定义明确表示需要闭包返回一个Bool类型的值，同时闭包的实现只有一行代码，显然可以判断，这一行代码肯定返回一个Bool类型的值，所以return关键字可以直接省略</p><h3 id="简写参数名"><a href="#简写参数名" class="headerlink" title="简写参数名"></a>简写参数名</h3><p>swift可以采用更简洁的方式来定义参数名，例如采用$0,$1,$2等等来引用闭包的参数，如果采用这种参数，in关键字也可以省略掉，最后闭包表达式可以非常简单，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; $0 &gt; $1 &#125; )</span><br></pre></td></tr></table></figure></p><p>$0表示第一个参数，$1表示第二个参数。</p><h3 id="运算符函数"><a href="#运算符函数" class="headerlink" title="运算符函数"></a>运算符函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &gt;)</span><br></pre></td></tr></table></figure><h2 id="尾闭包"><a href="#尾闭包" class="headerlink" title="尾闭包"></a>尾闭包</h2><p>例如有一个函数：这个函数的最后一个参数是一个闭包，并且，这个闭包表达式很长。如果按照正常的方式来调用这个函数的话，需要在参数里指明这个函数的参数名，然后后面跟着一个闭包表达式。比如下面这种函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func someFunctionThatTakesAClosure(closure: () -&gt; Void) &#123;</span><br><span class="line">    // function body goes here</span><br><span class="line">&#125;</span><br><span class="line">// Here&apos;s how you call this function without using a trailing closure:</span><br><span class="line">//正常使用该函数</span><br><span class="line">someFunctionThatTakesAClosure(closure: &#123;</span><br><span class="line">    // closure&apos;s body goes here</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// Here&apos;s how you call this function with a trailing closure instead:</span><br><span class="line">//使用尾随闭包</span><br><span class="line">someFunctionThatTakesAClosure() &#123;</span><br><span class="line">    // trailing closure&apos;s body goes here</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Swift的Array的sort函数也可以采用尾闭包的方式来调用，比如上面对字符串数组排序的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted() &#123; $0 &gt; $1 &#125;</span><br></pre></td></tr></table></figure></p><p>如果一个函数只有一个参数，并且这个参数是一个闭包，那么在使用这个函数的时候可以省略括号，比如上面的sorted函数可以写成这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted &#123; $0 &gt; $1 &#125;</span><br></pre></td></tr></table></figure></p><h2 id="逃逸闭包"><a href="#逃逸闭包" class="headerlink" title="逃逸闭包"></a>逃逸闭包</h2><p>当一个传入函数的闭包在函数执行结束之后才会被调用，这样的闭包就叫做逃逸闭包。如果一个函数的参数有一个逃逸闭包，可以在参数前加@escaping关键字来修饰。<br>一个闭包是逃逸必要的条件是这个闭包需要存储在函数外部。举个例子，很多异步操作的函数往往会传入一个complete handler作为异步操作完成后的回调。当这个异步函数开始执行的时候，会开启一个异步操作，然后这个函数就直接结束了，此时，传入的闭包还没有被执行，实际上这个回调需要在异步操作完成后才会被执行。这种情况下这个回调的闭包需要定义成逃逸闭包，因为它在函数调用结束之后才会被执行。比如下面的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var completionHandlers: [() -&gt; Void] = []</span><br><span class="line">func someFunctionWithEscapingClosure(completionHandler: @escaping () -&gt; Void) &#123;</span><br><span class="line">    completionHandlers.append(completionHandler)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>someFunctionWithEscapingClosure以一个completionHandler作为参数，这个参数会被保存在函数外部的completionHandlers数组中，这时这个闭包是一个逃逸闭包，所以需要添加@escaping关键字去修饰，否则会有编译错误。<br>逃逸闭包如果需要使用对象的变量或常量的时候，必须显示指明self，如果是普通的闭包，可以直接使用对象的变量或常量。比如下面的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">var completionHandlers: [() -&gt; Void] = []</span><br><span class="line">func someFunctionWithEscapingClosure(completionHandler: @escaping () -&gt; Void) &#123;</span><br><span class="line">    completionHandlers.append(completionHandler)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func someFunctionWithNonescapingClosure(closure: () -&gt; Void) &#123;</span><br><span class="line">    closure()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class SomeClass &#123;</span><br><span class="line">    var x = 10</span><br><span class="line">    func doSomething() &#123;</span><br><span class="line">    someFunctionWithEscapingClosure &#123; self.x = 100 &#125;</span><br><span class="line">    someFunctionWithNonescapingClosure &#123; x = 200 &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let instance = SomeClass()</span><br><span class="line">instance.doSomething()</span><br><span class="line">print(instance.x)</span><br><span class="line">// 输出 &quot;200&quot;</span><br><span class="line"></span><br><span class="line">completionHandlers.first?()</span><br><span class="line">print(instance.x)</span><br><span class="line">// 输出 &quot;100&quot;</span><br></pre></td></tr></table></figure></p><p>在这个例子中，第一个print输出200，因为当调用doSomethig的时候，someFunctionWithNonescapingClosure会直接调用闭包{x = 200},此时instance.x变成200，当completionHandlers.first?()之后，someFunctionWithEscapingClosure传入的闭包才会真正执行，此时instance.x变成100.可以看到，逃逸闭包必须显示指明self，而普通的闭包可以直接使用x。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;闭包的基本概念&quot;&gt;&lt;a href=&quot;#闭包的基本概念&quot; class=&quot;headerlink&quot; title=&quot;闭包的基本概念&quot;&gt;&lt;/a&gt;闭包的基本概念&lt;/h2&gt;&lt;p&gt;闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+    
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7日NodeJS神功</title>
+    <link href="http://yoursite.com/2018/09/10/7%E6%97%A5NodeJS%E7%A5%9E%E5%8A%9F/"/>
+    <id>http://yoursite.com/2018/09/10/7日NodeJS神功/</id>
+    <published>2018-09-10T02:40:09.000Z</published>
+    <updated>2018-09-10T02:46:38.432Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是NodeJS"><a href="#什么是NodeJS" class="headerlink" title="什么是NodeJS"></a>什么是NodeJS</h2><p>JS是一种脚本语言,脚本语言需要解析器才能运行,对于卸载HTML的JS来说,浏览器就充当的一个解析器的角色,对于独立运行的JS来说NodeJS就是一个解析器</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;什么是NodeJS&quot;&gt;&lt;a href=&quot;#什么是NodeJS&quot; class=&quot;headerlink&quot; title=&quot;什么是NodeJS&quot;&gt;&lt;/a&gt;什么是NodeJS&lt;/h2&gt;&lt;p&gt;JS是一种脚本语言,脚本语言需要解析器才能运行,对于卸载HTML的JS来说,浏览器就
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>理解this和对象原型</title>
@@ -435,57 +485,6 @@
       
       
         &lt;h2 id=&quot;文件包含&quot;&gt;&lt;a href=&quot;#文件包含&quot; class=&quot;headerlink&quot; title=&quot;文件包含&quot;&gt;&lt;/a&gt;文件包含&lt;/h2&gt;&lt;h3 id=&quot;方式一&quot;&gt;&lt;a href=&quot;#方式一&quot; class=&quot;headerlink&quot; title=&quot;方式一&quot;&gt;&lt;/a&gt;方式
-      
-    
-    </summary>
-    
-      <category term="Shell" scheme="http://yoursite.com/categories/Shell/"/>
-    
-    
-      <category term="Shell" scheme="http://yoursite.com/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Shell运算符</title>
-    <link href="http://yoursite.com/2017/08/17/Shell%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    <id>http://yoursite.com/2017/08/17/Shell运算符/</id>
-    <published>2017-08-17T08:12:25.000Z</published>
-    <updated>2018-09-03T10:16:37.058Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><p><img src="关系运算符1.png" alt=""></p><h2 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h2><p><img src="关系运算符2.png" alt=""></p><h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p><img src="关系运算符3.png" alt=""></p><h2 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h2><p><img src="关系运算符4.png" alt=""></p><h2 id="文件测试运算符"><a href="#文件测试运算符" class="headerlink" title="文件测试运算符"></a>文件测试运算符</h2><p><img src="关系运算符5.png" alt=""></p><h2 id="expr命令"><a href="#expr命令" class="headerlink" title=".expr命令"></a>.expr命令</h2><p><img src="关系运算符6.png" alt=""></p><h2 id="加法运算符"><a href="#加法运算符" class="headerlink" title="加法运算符"></a>加法运算符</h2><h3 id="使用使用expr外部样式（通用方式）"><a href="#使用使用expr外部样式（通用方式）" class="headerlink" title="使用使用expr外部样式（通用方式）"></a>使用使用expr外部样式（通用方式）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=1000</span><br><span class="line">b=3000</span><br><span class="line">r=`expr $a + $b`</span><br><span class="line">echo $r</span><br></pre></td></tr></table></figure><h3 id="使用-a-b"><a href="#使用-a-b" class="headerlink" title="使用 $(($a + $b))"></a>使用 $(($a + $b))</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=1000</span><br><span class="line">b=3000</span><br><span class="line">r=$(($a + $b))</span><br><span class="line">echo $r $d</span><br></pre></td></tr></table></figure><h3 id="使用-a-b-1"><a href="#使用-a-b-1" class="headerlink" title="使用$[$a + $b]"></a>使用$[$a + $b]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=1000</span><br><span class="line">b=3000</span><br><span class="line">r=$[$a + $b]</span><br><span class="line">echo $r $d</span><br></pre></td></tr></table></figure><h3 id="使用let"><a href="#使用let" class="headerlink" title="使用let"></a>使用let</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=1000</span><br><span class="line">b=3000</span><br><span class="line">let r=($a + $b)</span><br><span class="line">echo $r</span><br></pre></td></tr></table></figure><h2 id="减法运算符"><a href="#减法运算符" class="headerlink" title="减法运算符"></a>减法运算符</h2><p>同上</p><h2 id="乘法运算符"><a href="#乘法运算符" class="headerlink" title="乘法运算符"></a>乘法运算符</h2><h3 id="expr配合转义符"><a href="#expr配合转义符" class="headerlink" title="expr配合转义符"></a>expr配合转义符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r=`expr 4 \* 5`</span><br></pre></td></tr></table></figure><h3 id="其他方式"><a href="#其他方式" class="headerlink" title="其他方式"></a>其他方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">r=$(( 4 * 5 ))</span><br><span class="line">r=$[ 4 * 5 ]</span><br><span class="line">let m=n*10</span><br></pre></td></tr></table></figure><h2 id="除法运算符"><a href="#除法运算符" class="headerlink" title="除法运算符"></a>除法运算符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">r=`expr 40 / 5` </span><br><span class="line">r=$(( 40 / 5 ))</span><br><span class="line">r=$[ 40 / 5 ]</span><br><span class="line">let r=m/10</span><br></pre></td></tr></table></figure><h2 id="取余运算符"><a href="#取余运算符" class="headerlink" title="%取余运算符"></a>%取余运算符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name=&apos;expr $a % $b&apos;</span><br></pre></td></tr></table></figure><h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="=赋值运算符"></a>=赋值运算符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name=10</span><br></pre></td></tr></table></figure><h2 id="恒等运算符"><a href="#恒等运算符" class="headerlink" title="==恒等运算符"></a>==恒等运算符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a=0</span><br><span class="line">b=1</span><br><span class="line">if [$a == $b]</span><br><span class="line">then</span><br><span class="line">echo 1</span><br><span class="line">else</span><br><span class="line">echo 0</span><br><span class="line">fi</span><br></pre></td></tr></table></figure><h2 id="布尔运算符-1"><a href="#布尔运算符-1" class="headerlink" title="布尔运算符"></a>布尔运算符</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;关系运算符&quot;&gt;&lt;a href=&quot;#关系运算符&quot; class=&quot;headerlink&quot; title=&quot;关系运算符&quot;&gt;&lt;/a&gt;关系运算符&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;关系运算符1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;布尔运算符&quot;&gt;&lt;a href=&quot;
-      
-    
-    </summary>
-    
-      <category term="Shell" scheme="http://yoursite.com/categories/Shell/"/>
-    
-    
-      <category term="Shell" scheme="http://yoursite.com/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Shell数组</title>
-    <link href="http://yoursite.com/2017/08/17/Shell%E6%95%B0%E7%BB%84/"/>
-    <id>http://yoursite.com/2017/08/17/Shell数组/</id>
-    <published>2017-08-17T02:35:25.000Z</published>
-    <updated>2018-09-03T10:09:28.094Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="声明一个数组"><a href="#声明一个数组" class="headerlink" title="声明一个数组"></a>声明一个数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameArray=(&quot;Mike&quot; &quot;Bill&quot; &quot;John&quot;)</span><br></pre></td></tr></table></figure><h3 id="给数组增加值或者替换值"><a href="#给数组增加值或者替换值" class="headerlink" title="给数组增加值或者替换值"></a>给数组增加值或者替换值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameArray[3]=&quot;Gil&quot;</span><br></pre></td></tr></table></figure><h3 id="默认只输出数组第一个值"><a href="#默认只输出数组第一个值" class="headerlink" title="默认只输出数组第一个值"></a>默认只输出数组第一个值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $nameArray</span><br></pre></td></tr></table></figure><h3 id="输出下标指定的值"><a href="#输出下标指定的值" class="headerlink" title="输出下标指定的值"></a>输出下标指定的值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;nameArray[1]&#125; $&#123;nameArray[3]&#125;</span><br></pre></td></tr></table></figure><h3 id="输出数组内所有值-–-gt-结果为多个字符串"><a href="#输出数组内所有值-–-gt-结果为多个字符串" class="headerlink" title="输出数组内所有值 –&gt; 结果为多个字符串"></a>输出数组内所有值 –&gt; 结果为多个字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;nameArray[@]&#125;</span><br></pre></td></tr></table></figure><h3 id="输出数组内所有值-–-gt-结果为一个字符串"><a href="#输出数组内所有值-–-gt-结果为一个字符串" class="headerlink" title="输出数组内所有值 –&gt; 结果为一个字符串"></a>输出数组内所有值 –&gt; 结果为一个字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;nameArray[*]&#125;</span><br></pre></td></tr></table></figure><h3 id="获取数组元素个数"><a href="#获取数组元素个数" class="headerlink" title="获取数组元素个数"></a>获取数组元素个数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：$&#123;#数组名[@]&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;#nameArray&#125; ----- 输出数组第一个元素长度</span><br><span class="line">echo $&#123;#nameArray[10]&#125; ----- 输出数组第10个元素长度</span><br><span class="line">echo $&#123;#nameArray[@]&#125; ---- 输出数组整体元素个数</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;声明一个数组&quot;&gt;&lt;a href=&quot;#声明一个数组&quot; class=&quot;headerlink&quot; title=&quot;声明一个数组&quot;&gt;&lt;/a&gt;声明一个数组&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
       
     
     </summary>
