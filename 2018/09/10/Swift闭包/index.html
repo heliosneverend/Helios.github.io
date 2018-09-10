@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="闭包的基本概念闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。全局闭包：定义在全局，不捕获外部变量局部闭包：定义在函数内部，会捕获函数里面的变量匿名的闭包表达式：可以捕获上下文的变量 闭包的表达式语法swift中的闭包表达式定义如下">
+  <meta name="description" content="闭包的基本概念闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。全局闭包：定义在全局，不捕获外部变量局部闭包：定义在函数内部，会捕获函数里面的变量匿名的闭包表达式：可以捕获上下文的变量 在Swift中 闭包表达式做了如下优化推导参数并">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift闭包">
 <meta property="og:url" content="http://yoursite.com/2018/09/10/Swift闭包/index.html">
 <meta property="og:site_name" content="Heliso">
-<meta property="og:description" content="闭包的基本概念闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。全局闭包：定义在全局，不捕获外部变量局部闭包：定义在函数内部，会捕获函数里面的变量匿名的闭包表达式：可以捕获上下文的变量 闭包的表达式语法swift中的闭包表达式定义如下">
+<meta property="og:description" content="闭包的基本概念闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。全局闭包：定义在全局，不捕获外部变量局部闭包：定义在函数内部，会捕获函数里面的变量匿名的闭包表达式：可以捕获上下文的变量 在Swift中 闭包表达式做了如下优化推导参数并">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-10T08:20:02.776Z">
+<meta property="og:updated_time" content="2018-09-10T08:47:54.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift闭包">
-<meta name="twitter:description" content="闭包的基本概念闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。全局闭包：定义在全局，不捕获外部变量局部闭包：定义在函数内部，会捕获函数里面的变量匿名的闭包表达式：可以捕获上下文的变量 闭包的表达式语法swift中的闭包表达式定义如下">
+<meta name="twitter:description" content="闭包的基本概念闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。全局闭包：定义在全局，不捕获外部变量局部闭包：定义在函数内部，会捕获函数里面的变量匿名的闭包表达式：可以捕获上下文的变量 在Swift中 闭包表达式做了如下优化推导参数并">
 
 
 
@@ -377,7 +377,7 @@
                 
               
 
-              <time title="Created: 2018-09-10 15:45:01 / Modified: 16:20:02" itemprop="dateCreated datePublished" datetime="2018-09-10T15:45:01+08:00">2018-09-10</time>
+              <time title="Created: 2018-09-10 15:45:01 / Modified: 16:47:54" itemprop="dateCreated datePublished" datetime="2018-09-10T15:45:01+08:00">2018-09-10</time>
             
 
             
@@ -434,6 +434,7 @@
 
       
         <h2 id="闭包的基本概念"><a href="#闭包的基本概念" class="headerlink" title="闭包的基本概念"></a>闭包的基本概念</h2><p>闭包的就是匿名函数，类似于Objective-c或C中的block以及其他语言的lambdas。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。<br>全局闭包：定义在全局，不捕获外部变量<br>局部闭包：定义在函数内部，会捕获函数里面的变量<br>匿名的闭包表达式：可以捕获上下文的变量</p>
+<h3 id="在Swift中-闭包表达式做了如下优化"><a href="#在Swift中-闭包表达式做了如下优化" class="headerlink" title="在Swift中 闭包表达式做了如下优化"></a>在Swift中 闭包表达式做了如下优化</h3><p>推导参数并从上下文菜单返回值的类型<br>从单封表达的隐性返回<br>简略参数名称<br>尾部闭包语法</p>
 <h2 id="闭包的表达式语法"><a href="#闭包的表达式语法" class="headerlink" title="闭包的表达式语法"></a>闭包的表达式语法</h2><p>swift中的闭包表达式定义如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; (parameters) -&gt; return type in</span><br><span class="line">    statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>关键字in前面的是闭包的申明部分，类似函数的申明，包括参数的申明和返回值的申明；in后面的部分是闭包的实现。比如swift自带的array的sort函数，调用sort的时候需要传一个compare的闭包进去，代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; (s1: String, s2: String) -&gt; Bool in</span><br><span class="line">    return s1 &gt; s2</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <h3 id="根据上下文推测类型"><a href="#根据上下文推测类型" class="headerlink" title="根据上下文推测类型"></a>根据上下文推测类型</h3><p>上面的sort方法传入的是一个很标准的闭包表达式，在swift中，闭包表达式可以更简单，swift可以根据上下文推断出闭包表达式中参数的类型，以及返回值的类型。比如上面的sort函数，传入的闭包肯定是比较array里面的元素，所以闭包参数的类型肯定和array里面的元素类型一样（在这里是String类型），同样的，作为比较函数，返回值肯定是Bool类型。所以，参数类型和返回值类型都可以根据上下文推断出来，那么在闭包里面就可以直接省略。更简介的代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; s1, s2 in return s1 &gt; s2 &#125; )</span><br></pre></td></tr></table></figure></p>
@@ -441,6 +442,7 @@
 <h3 id="简写参数名"><a href="#简写参数名" class="headerlink" title="简写参数名"></a>简写参数名</h3><p>swift可以采用更简洁的方式来定义参数名，例如采用$0,$1,$2等等来引用闭包的参数，如果采用这种参数，in关键字也可以省略掉，最后闭包表达式可以非常简单，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; $0 &gt; $1 &#125; )</span><br></pre></td></tr></table></figure></p>
 <p>$0表示第一个参数，$1表示第二个参数。</p>
 <h3 id="运算符函数"><a href="#运算符函数" class="headerlink" title="运算符函数"></a>运算符函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &gt;)</span><br></pre></td></tr></table></figure>
+<p>闭包表达式不支持默认值 可变参数和元组也可以作为参数类型和返回类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let sum = &#123;(no1: Int, no2: Int) -&gt; Int in </span><br><span class="line">    return no1 + no2 </span><br><span class="line">&#125;</span><br><span class="line">let res = sum(10, 20)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure></p>
 <h2 id="尾闭包"><a href="#尾闭包" class="headerlink" title="尾闭包"></a>尾闭包</h2><p>例如有一个函数：这个函数的最后一个参数是一个闭包，并且，这个闭包表达式很长。如果按照正常的方式来调用这个函数的话，需要在参数里指明这个函数的参数名，然后后面跟着一个闭包表达式。比如下面这种函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func someFunctionThatTakesAClosure(closure: () -&gt; Void) &#123;</span><br><span class="line">    // function body goes here</span><br><span class="line">&#125;</span><br><span class="line">// Here&apos;s how you call this function without using a trailing closure:</span><br><span class="line">//正常使用该函数</span><br><span class="line">someFunctionThatTakesAClosure(closure: &#123;</span><br><span class="line">    // closure&apos;s body goes here</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// Here&apos;s how you call this function with a trailing closure instead:</span><br><span class="line">//使用尾随闭包</span><br><span class="line">someFunctionThatTakesAClosure() &#123;</span><br><span class="line">    // trailing closure&apos;s body goes here</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Swift的Array的sort函数也可以采用尾闭包的方式来调用，比如上面对字符串数组排序的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted() &#123; $0 &gt; $1 &#125;</span><br></pre></td></tr></table></figure></p>
 <p>如果一个函数只有一个参数，并且这个参数是一个闭包，那么在使用这个函数的时候可以省略括号，比如上面的sorted函数可以写成这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted &#123; $0 &gt; $1 &#125;</span><br></pre></td></tr></table></figure></p>
@@ -692,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的基本概念"><span class="nav-number">1.</span> <span class="nav-text">闭包的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的表达式语法"><span class="nav-number">2.</span> <span class="nav-text">闭包的表达式语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#根据上下文推测类型"><span class="nav-number">2.1.</span> <span class="nav-text">根据上下文推测类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#省略return关键字"><span class="nav-number">2.2.</span> <span class="nav-text">省略return关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简写参数名"><span class="nav-number">2.3.</span> <span class="nav-text">简写参数名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符函数"><span class="nav-number">2.4.</span> <span class="nav-text">运算符函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尾闭包"><span class="nav-number">3.</span> <span class="nav-text">尾闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逃逸闭包"><span class="nav-number">4.</span> <span class="nav-text">逃逸闭包</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的基本概念"><span class="nav-number">1.</span> <span class="nav-text">闭包的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在Swift中-闭包表达式做了如下优化"><span class="nav-number">1.1.</span> <span class="nav-text">在Swift中 闭包表达式做了如下优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的表达式语法"><span class="nav-number">2.</span> <span class="nav-text">闭包的表达式语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#根据上下文推测类型"><span class="nav-number">2.1.</span> <span class="nav-text">根据上下文推测类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#省略return关键字"><span class="nav-number">2.2.</span> <span class="nav-text">省略return关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简写参数名"><span class="nav-number">2.3.</span> <span class="nav-text">简写参数名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符函数"><span class="nav-number">2.4.</span> <span class="nav-text">运算符函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尾闭包"><span class="nav-number">3.</span> <span class="nav-text">尾闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逃逸闭包"><span class="nav-number">4.</span> <span class="nav-text">逃逸闭包</span></a></li></ol></div>
             
 
           </div>
